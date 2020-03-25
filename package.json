@@ -2,9 +2,9 @@
   "name": "caesar-and-vigenere-ciphers",
   "version": "1.0.0",
   "description": "caesar-and-vigenere-ciphers-application",
-  "main": "./js/index.js",
+  "main": "./script.js",
   "scripts": {
-    "start": "electron ./js/"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
