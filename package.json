@@ -1,0 +1,19 @@
+{
+  "name": "caesar-and-vigenere-ciphers",
+  "version": "1.0.0",
+  "description": "caesar-and-vigenere-ciphers-application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers.git"
+  },
+  "author": "Maxim Zavalniuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers/issues"
+  },
+  "homepage": "https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers#readme"
+}
