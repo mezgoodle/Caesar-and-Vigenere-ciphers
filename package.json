@@ -2,7 +2,7 @@
   "name": "caesar-and-vigenere-ciphers",
   "version": "1.0.0",
   "description": "caesar-and-vigenere-ciphers-application",
-  "main": "./script.js",
+  "main": "./main.js",
   "scripts": {
     "start": "electron ."
   },
