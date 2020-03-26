@@ -6,8 +6,8 @@ let win;
 
 function createWindow() {
     win = new BrowserWindow({
-        width: 700,
-        height: 500, 
+        width: 800,
+        height: 600, 
         icon: __dirname + "/img/icon.png",
     });
 
@@ -17,7 +17,7 @@ function createWindow() {
         slashes: true,
     }));
 
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
 
     win.on('closed', () => {
         win = null;
