@@ -1,31 +1,27 @@
-const electron = require('electron');
-const url = require('url');
 const path = require('path');
+const url = require('url');
+const {app, BrowserWindow} = require('electron');
 
-const {app, BrowserWindow, Menu} = electron;
+let win;
 
-let mainWindow;
+function createWindow() {
+    win = new BrowserWindow({
+        width: 700,
+        height: 500, 
+        icon: __dirname + "/img/icon.png",
+    });
 
-// Listen for app to be ready
-app.on('ready', function(){
-    // Create new window
-    mainWindow = new BrowserWindow({});
-    // Load html file into window
-    mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'mainWindow.html'),
+    win.loadURL(url.format({
+        pathname: path.join(__dirname, 'index.html'),
         protocol: 'file',
         slashes: true,
     }));
 
-    // Build menu from template
-    const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-    // Insert menu
-    Menu.setApplicationMenu(mainMenu);
-});
+    win.webContents.openDevTools();
 
-// Create menu template
-const mainMenuTemplate = [
-    {
-        label: 'File'
-    }
-];
+    win.on('closed', () => {
+        win = null;
+    });
+}
+
+app.on('ready', createWindow);
