@@ -17,8 +17,8 @@ const data = [{
         expected: "pellentesque",
     },
 ];
+
 for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
-}
-const result = fn("Attack at dawn!", 12);
-assert.strictEqual(result, "Mffmow mf pmiz!", 'Negative string');
+    let result = fn(data[i].value, data[i].amount);
+    assert.strictEqual(result, data[i].expected, 'Negative string');
+};
