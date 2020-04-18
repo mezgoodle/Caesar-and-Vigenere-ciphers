@@ -1,0 +1,27 @@
+{
+  "name": "caesar-and-vigenere-ciphers",
+  "version": "1.0.0",
+  "description": "Console programm of caesar-and-vigenere-ciphers",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers.git"
+  },
+  "keywords": [
+    "nodejs",
+    "cipher"
+  ],
+  "author": "Maxim Zavalnuik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers/issues"
+  },
+  "homepage": "https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers#readme"
+}
