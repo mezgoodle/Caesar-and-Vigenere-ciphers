@@ -19,6 +19,6 @@ const data = [{
 ];
 
 for (let i = 0; i < data.length; i++) {
-    let result = fn(data[i].value, data[i].amount);
-    assert.strictEqual(result, data[i].expected, 'Negative string');
-};
+    let result = fn(data[parseInt(i)].value, data[parseInt(i)].amount);
+    assert.strictEqual(result, data[parseInt(i)].expected, "Negative string");
+}
