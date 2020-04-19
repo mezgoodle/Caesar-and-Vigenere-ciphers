@@ -1,8 +1,8 @@
-let caesarShift = (str, amount) => {
+let caesarEncrypt = (str, amount) => {
 
     // Wrap the amount
     if (amount < 0) {
-        return caesarShift(str, amount + 26);
+        return caesarEncrypt(str, amount + 26);
     }
 
     if (typeof(str) !== "string") {
@@ -44,4 +44,12 @@ let caesarShift = (str, amount) => {
     // All done!
     return output;
 };
-module.exports = caesarShift;
+
+const caesarDecrypt = (text, shift) => {
+    let result = "";
+    shift = (26 - shift) % 26;
+    result = caesarEncrypt(text, shift);
+    return result;
+};
+
+module.exports = { caesarEncrypt, caesarDecrypt };

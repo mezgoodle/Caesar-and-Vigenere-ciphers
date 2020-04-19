@@ -1,4 +1,4 @@
-const fn = require("./ciphers");
+const { caesarEncrypt } = require("./ciphers");
 const assert = require("assert").strict;
 
 // Test
@@ -16,7 +16,7 @@ const tests = [
         ["adadA", 13123], "twtwT", "testUpperLowerCase"
     ],
     [
-        ["ad_dA", 1], "be_eb", "testStringWithSymbols"
+        ["ad_dA", 1], "be_eB", "testStringWithSymbols"
     ],
     [
         ["13123131", 5], "13123131", "testIntegers"
@@ -28,7 +28,7 @@ const tests = [
         ["!@$^@a", -1970], "!@$^@g", "testSymbolsWithString"
     ],
     [
-        ["dada", -19.70], "jgj", "testFloatAmount"
+        ["dada", -19.70], "jgjg", "testFloatAmount"
     ],
 ];
 
@@ -36,7 +36,7 @@ const tests = [
 const results = [];
 for (const test of tests) {
     const [par, expected, name] = test;
-    const result = fn(par[0], par[1]);
+    const result = caesarEncrypt(par[0], par[1]);
     try {
         assert.strictEqual(result, expected, `Error in test "${name}"`);
     } catch (err) {
