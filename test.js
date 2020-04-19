@@ -1,54 +1,67 @@
 const fn = require("./ciphers");
 const assert = require("assert").strict;
 
-const data = [{
-        value: "pellentesque",
-        amount: 12,
-        expected: "bqxxqzfqecgq",
-    },
-    {
-        value: "pellentesque",
-        amount: 0,
-        expected: "pellentesque",
-    },
-    {
-        value: "bqxxqzfqecgq",
-        amount: -12,
-        expected: "pellentesque",
-    },
-    {
-        value: "adadA",
-        amount: 13123,
-        expected: "twtwT",
-    },
-    {
-        value: "ad_dA",
-        amount: 1,
-        expected: "be_eB",
-    },
-    {
-        value: "13123131",
-        amount: 5,
-        expected: "13123131",
-    },
-    {
-        value: "!@&*^",
-        amount: -134353,
-        expected: "!@&*^",
-    },
-    {
-        value: "!@$^@a",
-        amount: -1970,
-        expected: "!@$^@g",
-    },
-    {
-        value: "dada",
-        amount: 19.7,
-        expected: "wtwt",
-    },
+const testSimple = () => {
+    let result = fn("pellentesque", 12);
+    assert.strictEqual(result, "bqxxqzfqecgq", "Negative string");
+};
+
+const testZeroAmount = () => {
+    let result = fn("pellentesque", 0);
+    assert.strictEqual(result, "pellentesque", "Negative string");
+};
+
+const testSimpleReverse = () => {
+    let result = fn("bqxxqzfqecgq", -12);
+    assert.strictEqual(result, "pellentesque", "Negative string");
+};
+
+const testUpperLowerCase = () => {
+    let result = fn("adadA", 13123);
+    assert.strictEqual(result, "twtwT", "Negative string");
+};
+
+const testStringWithSymbols = () => {
+    let result = fn("ad_dA", 1);
+    assert.strictEqual(result, "be_eB", "Negative string");
+};
+
+const testIntegers = () => {
+    let result = fn("13123131", 5);
+    assert.strictEqual(result, "13123131", "Negative string");
+};
+
+const testSymbols = () => {
+    let result = fn("!@&*^", -134353);
+    assert.strictEqual(result, "!@&*^", "Negative string");
+};
+
+const testSymbolsWithString = () => {
+    let result = fn("!@$^@a", -1970);
+    assert.strictEqual(result, "!@$^@g", "Negative string");
+};
+
+const testFloatAmount = () => {
+    let result = fn("dada", 19.70);
+    assert.strictEqual(result, "wtwt", "Negative string");
+};
+
+const tests = [
+    testSimple,
+    testZeroAmount,
+    testSimpleReverse,
+    testUpperLowerCase,
+    testStringWithSymbols,
+    testIntegers,
+    testSymbols,
+    testSymbolsWithString,
+    testFloatAmount,
 ];
 
-for (let i = 0; i < data.length; i++) {
-    let result = fn(data[parseInt(i)].value, data[parseInt(i)].amount);
-    assert.strictEqual(result, data[parseInt(i)].expected, "Negative string");
+for (const test of tests) {
+    try {
+        test();
+    } catch (err) {
+        console.log(err);
+    }
 }
