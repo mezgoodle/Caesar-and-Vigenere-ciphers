@@ -9,7 +9,7 @@
     },
     "scripts": {
         "start": "node .",
-        "test": "node test.js"
+        "test": "node tests.js && jest"
     },
     "repository": {
         "type": "git",
