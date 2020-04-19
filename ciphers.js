@@ -5,6 +5,10 @@ let caesarShift = (str, amount) => {
         return caesarShift(str, amount + 26);
     }
 
+    if (typeof(str) !== "string") {
+        throw Error("String or number expected");
+    }
+
     // Make an output letiable
     let output = "";
 
