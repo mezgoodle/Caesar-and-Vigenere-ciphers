@@ -4,7 +4,9 @@
     "description": "Console programm of caesar-and-vigenere-ciphers",
     "main": "main.js",
     "dependencies": {},
-    "devDependencies": {},
+    "devDependencies": {
+        "jest": "^25.3.0"
+    },
     "scripts": {
         "start": "node .",
         "test": "node test.js"
