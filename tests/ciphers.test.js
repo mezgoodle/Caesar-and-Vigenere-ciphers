@@ -1,4 +1,4 @@
-const { caesarEncrypt } = require("./ciphers");
+const { caesarEncrypt } = require("../ciphers");
 
 describe("caesarEncrypt:", () => {
     test("testSimple", () => {
