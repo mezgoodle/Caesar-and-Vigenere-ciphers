@@ -51,6 +51,11 @@ const testNumberType = () => {
     assert.strictEqual(result, "wtwt", "Negative string");
 };
 
+const testUndefinedType = () => {
+    let result = fn(undefined, -0);
+    assert.strictEqual(result, "wtwt", "Negative string");
+};
+
 const tests = [
     testSimple,
     testZeroAmount,
@@ -62,6 +67,7 @@ const tests = [
     testSymbolsWithString,
     testFloatAmount,
     testNumberType,
+    testUndefinedType,
 ];
 
 for (const test of tests) {
