@@ -1,7 +1,11 @@
-const caesarEncrypt = (str, amount) => {
+const caesarEncrypt = (str = null, amount = null) => {
 
-    if (!Number.isInteger(amount)) {
-        throw Error("Amount should be integer");
+    if (str === null) {
+        throw Error("Message should be not empty");
+    }
+
+    if (!Number.isInteger(amount) || amount === null) {
+        throw Error("Amount should be integer and not empty");
     }
 
     // Wrap the amount
@@ -55,5 +59,4 @@ const caesarDecrypt = (text, shift) => {
     result = caesarEncrypt(text, shift);
     return result;
 };
-
 module.exports = { caesarEncrypt, caesarDecrypt };
