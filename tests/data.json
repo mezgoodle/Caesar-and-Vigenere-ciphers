@@ -23,6 +23,9 @@
         ],
         [
             { "value": "!@$^@a", "amount": -1970 }, "!@$^@g", "testSymbolsWithString"
+        ],
+        [
+            { "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "amount": 10 }, "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "testLongString"
         ]
     ],
     "caesareDecrypt": [
@@ -49,6 +52,9 @@
         ],
         [
             { "value": "!@$^@g", "amount": -1970 }, "!@$^@a", "testSymbolsWithString"
+        ],
+        [
+            { "value": "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "amount": 10 }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "testLongString"
         ]
     ]
 }
