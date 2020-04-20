@@ -1,0 +1,31 @@
+{
+    "caesareEncrypt": [
+        [
+            { "value": "pellentesque", "amount": 12 }, "bqxxqzfqecgq", "testSimple"
+        ],
+        [
+            { "value": "pellentesque", "amount": 0 }, "pellentesque", "testZeroAmount"
+        ],
+        [
+            { "value": "bqxxqzfqecgq", "amount": -12 }, "pellentesque", "testSimpleReverse"
+        ],
+        [
+            { "value": "adadA", "amount": 13123 }, "twtwT", "testUpperLowerCase"
+        ],
+        [
+            { "value": "ad_dA", "amount": 1 }, "be_eB", "testStringWithSymbols"
+        ],
+        [
+            { "value": "13123131", "amount": 5 }, "13123131", "testIntegers"
+        ],
+        [
+            { "value": "!@&*^", "amount": -134353 }, "!@&*^", "testSymbols"
+        ],
+        [
+            { "value": "!@$^@a", "amount": -1970 }, "!@$^@g", "testSymbolsWithString"
+        ],
+        [
+            { "value": "dada", "amount": -19.70 }, "jgjg", "testFloatAmount"
+        ]
+    ]
+}
