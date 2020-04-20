@@ -30,19 +30,19 @@
     ],
     "caesareDecrypt": [
         [
-            { "value": "bqxxqzfqecgq", "amount": 12 }, "pellentesque", "testSimple"
+            { "value": "opqrstuvwxxyzabcdefghijklm", "amount": 14 }, "abcdefghijjklmnopqrstuvwxy", "testSimple"
         ],
         [
-            { "value": "pellentesque", "amount": 0 }, "pellentesque", "testZeroAmount"
+            { "value": "bcdefghijkklmnopqrstuvwxyza", "amount": 0 }, "bcdefghijkklmnopqrstuvwxyza", "testZeroAmount"
         ],
         [
             { "value": "pellentesque", "amount": -12 }, "bqxxqzfqecgq", "testSimpleReverse"
         ],
         [
-            { "value": "twtwT", "amount": 13123 }, "adadA", "testUpperLowerCase"
+            { "value": "BZECjxyBue", "amount": 25 }, "CAFDkyzCvf", "testUpperLowerCase"
         ],
         [
-            { "value": "be_eB", "amount": 1 }, "ad_dA", "testStringWithSymbols"
+            { "value": "YtHy#weQ^LVt", "amount": 7 }, "RmAr#pxJ^EOm", "testStringWithSymbols"
         ],
         [
             { "value": "13123131", "amount": 5 }, "13123131", "testIntegers"
