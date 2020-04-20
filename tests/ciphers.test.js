@@ -1,15 +1,8 @@
 const { caesarEncrypt } = require("../ciphers");
+const tests = require("./data");
 
-describe("caesarEncrypt:", () => {
-    test("testSimple", () => {
-        expect(caesarEncrypt("pellentesque", 12)).toBe("bqxxqzfqecgq");
+describe.each(tests)("Testing", (params, expected, name) => {
+    test(name, () => {
+        expect(caesarEncrypt(params.value, params.amount)).toBe(expected);
     });
-
-    test("testFloatAmount", () => {
-        expect(caesarEncrypt("dada", -19.70)).toBe("jgjg");
-    });
-
-    test("testZeroAmount", () => {
-        expect(caesarEncrypt("pellentesque", -0)).toBe("pellentesque");
-    });
-})
+});
