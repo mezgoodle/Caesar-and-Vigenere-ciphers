@@ -4,22 +4,31 @@ const assert = require("assert").strict;
 
 // Output
 console.log("Encrypt");
-const results = [];
+let results = [];
 for (const test of data.caesareEncrypt) {
     const [params, expected, name] = test;
-    const result_encrypted = caesarEncrypt(params.value, params.amount);
-    const result_decrypted = caesarDecrypt(expected, params.amount);
+    const result = caesarEncrypt(params.value, params.amount);
     try {
-        assert.strictEqual(result_encrypted, expected, `Error in test "${name}"`);
+        assert.strictEqual(result, expected, `Error in test "${name}"`);
     } catch (err) {
         const { message, operator } = err;
-        results.push({ message, params, expected, result_encrypted, operator });
-    }
-    try {
-
-    } catch (err) {
-        const { message, operator } = err;
-        results.push({ message, params, expected, result_decrypted, operator });
+        results.push({ message, params, expected, result, operator });
     }
 }
+
+console.table(results);
+results = [];
+
+console.log("Decrypt");
+for (const test of data.caesareDecrypt) {
+    const [params, expected, name] = test;
+    const result = caesarDecrypt(params.value, params.amount);
+    try {
+        assert.strictEqual(result, expected, `Error in test "${name}"`);
+    } catch (err) {
+        const { message, operator } = err;
+        results.push({ message, params, expected, result, operator });
+    }
+}
+
 console.table(results);

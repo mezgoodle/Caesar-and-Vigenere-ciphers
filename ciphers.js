@@ -1,4 +1,8 @@
-let caesarEncrypt = (str, amount) => {
+const caesarEncrypt = (str, amount) => {
+
+    if (!Number.isInteger(amount)) {
+        throw Error("Amount should be integer");
+    }
 
     // Wrap the amount
     if (amount < 0) {

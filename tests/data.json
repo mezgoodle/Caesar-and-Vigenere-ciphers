@@ -23,9 +23,32 @@
         ],
         [
             { "value": "!@$^@a", "amount": -1970 }, "!@$^@g", "testSymbolsWithString"
+        ]
+    ],
+    "caesareDecrypt": [
+        [
+            { "value": "bqxxqzfqecgq", "amount": 12 }, "pellentesque", "testSimple"
         ],
         [
-            { "value": "dada", "amount": -19.70 }, "jgjg", "testFloatAmount"
+            { "value": "pellentesque", "amount": 0 }, "pellentesque", "testZeroAmount"
+        ],
+        [
+            { "value": "pellentesque", "amount": -12 }, "bqxxqzfqecgq", "testSimpleReverse"
+        ],
+        [
+            { "value": "twtwT", "amount": 13123 }, "adadA", "testUpperLowerCase"
+        ],
+        [
+            { "value": "be_eB", "amount": 1 }, "ad_dA", "testStringWithSymbols"
+        ],
+        [
+            { "value": "13123131", "amount": 5 }, "13123131", "testIntegers"
+        ],
+        [
+            { "value": "!@&*^", "amount": -134353 }, "!@&*^", "testSymbols"
+        ],
+        [
+            { "value": "!@$^@g", "amount": -1970 }, "!@$^@a", "testSymbolsWithString"
         ]
     ]
 }
