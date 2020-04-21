@@ -8,7 +8,7 @@ cache:
   paths:
     - node_modules/
 
-install_dependencies:
+Install dependencies:
   stage: build
   script:
     - npm install
@@ -16,6 +16,6 @@ install_dependencies:
     paths:
       - node_modules/
 
-testing:
+Testing:
   stage: test
   script: npm test
