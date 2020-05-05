@@ -1,4 +1,4 @@
-const caesarEncrypt(str = null, amount = null) => {
+const caesarEncrypt = (str = null, amount = null) => {
 
     if (str === null) {
         throw Error("Message should be not empty");
@@ -53,7 +53,7 @@ const caesarEncrypt(str = null, amount = null) => {
     return output;
 };
 
-const caesarDecrypt(text, shift) => {
+const caesarDecrypt = (text, shift) => {
     let result = "";
     shift = (26 - shift) % 26;
     result = caesarEncrypt(text, shift);
