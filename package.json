@@ -2,7 +2,7 @@
     "name": "caesar-and-vigenere-ciphers",
     "version": "1.0.0",
     "description": "Console programm of caesar-and-vigenere-ciphers",
-    "main": "main.js",
+    "main": "index.js",
     "dependencies": {},
     "devDependencies": {
         "jest": "^26.0.0"
