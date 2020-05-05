@@ -1,6 +1,6 @@
 {
     "name": "caesar-and-vigenere-ciphers",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Console programm of caesar-and-vigenere-ciphers",
     "main": "src/index.js",
     "dependencies": {},
