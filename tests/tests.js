@@ -1,4 +1,4 @@
-const { caesarEncrypt, caesarDecrypt } = require("../index");
+const { caesarEncrypt, caesarDecrypt } = require("../src/index");
 const data = require("./data.json");
 const assert = require("assert").strict;
 
