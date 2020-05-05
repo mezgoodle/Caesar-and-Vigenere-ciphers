@@ -1,4 +1,4 @@
-const { caesarEncrypt, caesarDecrypt } = require("../ciphers");
+const { caesarEncrypt, caesarDecrypt } = require("../index");
 const data = require("./data.json");
 
 describe.each(data.caesareEncrypt)("Testing Caesare encrypting", (params, expected, name) => {
