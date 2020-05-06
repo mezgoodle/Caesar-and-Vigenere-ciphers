@@ -1,7 +1,7 @@
 {
-    "name": "caesar-and-vigenere-ciphers",
-    "version": "1.0.10",
-    "description": "Console programm of caesar-and-vigenere-ciphers",
+    "name": "@mezgoodle/caesar-and-vigenere-ciphers",
+    "version": "1.0.11",
+    "description": "NPM package of caesar-and-vigenere-ciphers",
     "main": "src/index.js",
     "dependencies": {},
     "devDependencies": {
