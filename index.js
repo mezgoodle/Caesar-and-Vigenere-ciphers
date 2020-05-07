@@ -44,7 +44,7 @@ const caesarEncrypt = (str = null, amount = null) => {
 
         }
 
-        // Append
+        // Appen
         output += c;
 
     }
