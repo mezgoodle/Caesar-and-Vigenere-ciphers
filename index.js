@@ -118,7 +118,7 @@ const vigenereDecryptText = (cipher, key) => {
 }
 
 
-module.exports = { caesarEncrypt, caesarDecrypt };
+module.exports = { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText };
 
 // Testing
 console.log(vigenereEncryptText("max", "abc"));
