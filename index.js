@@ -72,6 +72,19 @@ const vigenereEncryptChar = (t, k) => {
     return String.fromCharCode((uppercase ? A : a) + (((t - a) + (k - a)) % 26));
 };
 
+const vigenereDecryptChar = (c, k) => {
+    if (!isLetter(c) || !isLetter(k)) return c;
+    let uppercase = isUpperCase(c);
+    c = c.toLowerCase().charCodeAt(0);
+    k = k.toLowerCase().charCodeAt(0);
+    a = "a".charCodeAt(0);
+    A = "A".charCodeAt(0);
+    let t = a + ((c - a) - (k - a));
+    if (t < a) t += 26;
+    t = String.fromCharCode(t);
+    return uppercase ? t.toUpperCase() : t;
+}
+
 const vigenereEncryptText = (text, key) => {
     key = keepLetters(key);
     let cipher = "",
@@ -85,6 +98,23 @@ const vigenereEncryptText = (text, key) => {
         } else cipher += t;
     }
     return cipher;
+};
+
+const vigenereDecryptText = (cipher, key) => {
+    key = keepLetters(key);
+    let text = "",
+        keyIndex = 0;
+    for (let i = 0; i < cipher.length; ++i) {
+        let c = cipher.charAt(i);
+        if (isLetter(c)) {
+            k = key.charAt(keyIndex++ % key.length);
+            t = vigenereDecryptChar(c, k);
+            text += t;
+        } else {
+            text += c;
+        }
+    }
+    return text;
 }
 
 
@@ -92,3 +122,4 @@ module.exports = { caesarEncrypt, caesarDecrypt };
 
 // Testing
 console.log(vigenereEncryptText("max", "abc"));
+console.log(vigenereDecryptText(vigenereEncryptText("max", "abc"), "abc"));
