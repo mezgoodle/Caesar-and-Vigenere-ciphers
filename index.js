@@ -1,12 +1,8 @@
 const caesarEncrypt = (str = null, amount = null) => {
 
-    if (str === null) {
-        throw Error("Message should be not empty");
-    }
+    if (str === null) throw Error("Message should be not empty");
 
-    if (!Number.isInteger(amount) || amount === null) {
-        throw Error("Amount should be integer and not empty");
-    }
+    if (!Number.isInteger(amount) || amount === null) throw Error("Amount should be integer and not empty");
 
     // Wrap the amount
     if (amount < 0) {
