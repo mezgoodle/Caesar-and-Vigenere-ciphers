@@ -85,7 +85,7 @@ const vigenereDecryptChar = (c, k) => {
     return uppercase ? t.toUpperCase() : t;
 };
 
-const vigenereEncryptText = (text, key) => {
+const vigenereEncryptText = (text = null, key = null) => {
     key = keepLetters(key);
     let cipher = "",
         keyIndex = 0;
@@ -100,7 +100,7 @@ const vigenereEncryptText = (text, key) => {
     return cipher;
 };
 
-const vigenereDecryptText = (cipher, key) => {
+const vigenereDecryptText = (cipher = null, key = null) => {
     key = keepLetters(key);
     let text = "",
         keyIndex = 0;
