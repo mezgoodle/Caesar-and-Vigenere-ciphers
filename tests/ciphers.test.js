@@ -1,14 +1,15 @@
-const { caesarEncrypt, caesarDecrypt } = require("../index");
+const { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText } = require("../index");
 const data = require("./data.json");
 
-describe.each(data.caesareEncrypt)("Testing Caesare encrypting", (params, expected, name) => {
-    test(name, () => {
-        expect(caesarEncrypt(params.value, params.amount)).toBe(expected);
+const testingWorker = (data, name, fn) => {
+    describe.each(data)(name, (params, expected, name) => {
+        test(name, () => {
+            expect(fn(params.value, params.key)).toBe(expected);
+        });
     });
-});
+};
 
-describe.each(data.caesareDecrypt)("Testing Caesare decrypting", (params, expected, name) => {
-    test(name, () => {
-        expect(caesarDecrypt(params.value, params.amount)).toBe(expected);
-    });
-});
+testingWorker(data.caesareEncrypt, "Testing Caesare encrypting", caesarEncrypt);
+testingWorker(data.caesareDecrypt, "Testing Caesare decrypting", caesarDecrypt);
+testingWorker(data.vigenereEncrypt, "Testing Vigenere encrypting", vigenereEncryptText);
+testingWorker(data.vigenereDecrypt, "Testing Vigenere decrypting", vigenereDecryptText);
