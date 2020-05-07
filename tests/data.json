@@ -4,6 +4,9 @@
             { "value": "pellentesque", "amount": 12 }, "bqxxqzfqecgq", "testSimple"
         ],
         [
+            { "value": "m1x", "amount": 7 }, "t1e", "testSimpleWithDigits"
+        ],
+        [
             { "value": "i am Max", "amount": 5 }, "n fr Rfc", "testSimpleWithSpaces"
         ],
         [
@@ -34,6 +37,9 @@
     "caesareDecrypt": [
         [
             { "value": "opqrstuvwxxyzabcdefghijklm", "amount": 14 }, "abcdefghijjklmnopqrstuvwxy", "testSimple"
+        ],
+        [
+            { "value": "b1m", "amount": 15 }, "m1x", "testSimpleWithDigits"
         ],
         [
             { "value": "u my Ymj", "amount": 12 }, "i am Max", "testSimpleWithSpaces"
