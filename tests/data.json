@@ -1,72 +1,82 @@
 {
     "caesareEncrypt": [
         [
-            { "value": "pellentesque", "amount": 12 }, "bqxxqzfqecgq", "testSimple"
+            { "value": "pellentesque", "key": 12 }, "bqxxqzfqecgq", "testSimple"
         ],
         [
-            { "value": "m1x", "amount": 7 }, "t1e", "testSimpleWithDigits"
+            { "value": "m1x", "key": 7 }, "t1e", "testSimpleWithDigits"
         ],
         [
-            { "value": "i am Max", "amount": 5 }, "n fr Rfc", "testSimpleWithSpaces"
+            { "value": "i am Max", "key": 5 }, "n fr Rfc", "testSimpleWithSpaces"
         ],
         [
-            { "value": "pellentesque", "amount": 0 }, "pellentesque", "testZeroAmount"
+            { "value": "pellentesque", "key": 0 }, "pellentesque", "testZeroAmount"
         ],
         [
-            { "value": "bqxxqzfqecgq", "amount": -12 }, "pellentesque", "testSimpleReverse"
+            { "value": "bqxxqzfqecgq", "key": -12 }, "pellentesque", "testSimpleReverse"
         ],
         [
-            { "value": "adadA", "amount": 13123 }, "twtwT", "testUpperLowerCase"
+            { "value": "adadA", "key": 13123 }, "twtwT", "testUpperLowerCase"
         ],
         [
-            { "value": "ad_dA", "amount": 1 }, "be_eB", "testStringWithSymbols"
+            { "value": "ad_dA", "key": 1 }, "be_eB", "testStringWithSymbols"
         ],
         [
-            { "value": "13123131", "amount": 5 }, "13123131", "testIntegers"
+            { "value": "13123131", "key": 5 }, "13123131", "testIntegers"
         ],
         [
-            { "value": "!@&*^", "amount": -134353 }, "!@&*^", "testSymbols"
+            { "value": "!@&*^", "key": -134353 }, "!@&*^", "testSymbols"
         ],
         [
-            { "value": "!@$^@a", "amount": -1970 }, "!@$^@g", "testSymbolsWithString"
+            { "value": "!@$^@a", "key": -1970 }, "!@$^@g", "testSymbolsWithString"
         ],
         [
-            { "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "amount": 10 }, "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "testLongString"
+            { "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "key": 10 }, "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "testLongString"
         ]
     ],
     "caesareDecrypt": [
         [
-            { "value": "opqrstuvwxxyzabcdefghijklm", "amount": 14 }, "abcdefghijjklmnopqrstuvwxy", "testSimple"
+            { "value": "opqrstuvwxxyzabcdefghijklm", "key": 14 }, "abcdefghijjklmnopqrstuvwxy", "testSimple"
         ],
         [
-            { "value": "b1m", "amount": 15 }, "m1x", "testSimpleWithDigits"
+            { "value": "b1m", "key": 15 }, "m1x", "testSimpleWithDigits"
         ],
         [
-            { "value": "u my Ymj", "amount": 12 }, "i am Max", "testSimpleWithSpaces"
+            { "value": "u my Ymj", "key": 12 }, "i am Max", "testSimpleWithSpaces"
         ],
         [
-            { "value": "bcdefghijkklmnopqrstuvwxyza", "amount": 0 }, "bcdefghijkklmnopqrstuvwxyza", "testZeroAmount"
+            { "value": "bcdefghijkklmnopqrstuvwxyza", "key": 0 }, "bcdefghijkklmnopqrstuvwxyza", "testZeroAmount"
         ],
         [
-            { "value": "pellentesque", "amount": -12 }, "bqxxqzfqecgq", "testSimpleReverse"
+            { "value": "pellentesque", "key": -12 }, "bqxxqzfqecgq", "testSimpleReverse"
         ],
         [
-            { "value": "BZECjxyBue", "amount": 25 }, "CAFDkyzCvf", "testUpperLowerCase"
+            { "value": "BZECjxyBue", "key": 25 }, "CAFDkyzCvf", "testUpperLowerCase"
         ],
         [
-            { "value": "YtHy#weQ^LVt", "amount": 7 }, "RmAr#pxJ^EOm", "testStringWithSymbols"
+            { "value": "YtHy#weQ^LVt", "key": 7 }, "RmAr#pxJ^EOm", "testStringWithSymbols"
         ],
         [
-            { "value": "13123131", "amount": 5 }, "13123131", "testIntegers"
+            { "value": "13123131", "key": 5 }, "13123131", "testIntegers"
         ],
         [
-            { "value": "!@&*^", "amount": -134353 }, "!@&*^", "testSymbols"
+            { "value": "!@&*^", "key": -134353 }, "!@&*^", "testSymbols"
         ],
         [
-            { "value": "!@$^@g", "amount": -1970 }, "!@$^@a", "testSymbolsWithString"
+            { "value": "!@$^@g", "key": -1970 }, "!@$^@a", "testSymbolsWithString"
         ],
         [
-            { "value": "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "amount": 10 }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "testLongString"
+            { "value": "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "key": 10 }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "testLongString"
+        ]
+    ],
+    "vigenereEncrypt": [
+        [
+            { "value": "max", "key": "abc" }, "mbz", "testSimple"
+        ]
+    ],
+    "vigenereDecrypt": [
+        [
+            { "value": "mbz", "key": "abc" }, "max", "testSimple"
         ]
     ]
 }
