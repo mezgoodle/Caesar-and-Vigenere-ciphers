@@ -71,12 +71,12 @@
     ],
     "vigenereEncrypt": [
         [
-            { "value": "max", "key": "abc" }, "mbz", "testSimple"
+            { "value": "unopinionated", "key": "express" }, "ykdgmfaskpkiv", "testSimple"
         ]
     ],
     "vigenereDecrypt": [
         [
-            { "value": "mbz", "key": "abc" }, "max", "testSimple"
+            { "value": "ykdgmfaskpkiv", "key": "express" }, "unopinionated", "testSimple"
         ]
     ]
 }
