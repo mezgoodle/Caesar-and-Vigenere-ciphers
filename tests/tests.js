@@ -20,24 +20,32 @@ const testingWorker = (data, fn) => {
 // Output
 let results = [];
 
-console.log("Caesar Encrypt");
-results = testingWorker(data.caesareEncrypt, caesarEncrypt);
-console.table(results);
+const config = [{
+        name: "Caesar Encrypt",
+        data: data.caesareEncrypt,
+        fn: caesarEncrypt
+    },
+    {
+        name: "Caesar Decrypt",
+        data: data.caesareDecrypt,
+        fn: caesarDecrypt
+    },
+    {
+        name: "Vigenere Encrypt",
+        data: data.vigenereEncrypt,
+        fn: vigenereEncryptText
+    },
+    {
+        name: "Vigenere Decrypt",
+        data: data.vigenereDecrypt,
+        fn: vigenereDecryptText
+    }
+];
 
-results = [];
-
-console.log("Caesar Decrypt");
-results = testingWorker(data.caesareDecrypt, caesarDecrypt);
-console.table(results);
-
-results = [];
-
-console.log("Vigenere Encrypt");
-results = testingWorker(data.vigenereEncrypt, vigenereEncryptText);
-console.table(results);
-
-results = [];
-
-console.log("Vigenere Decrypt");
-results = testingWorker(data.vigenereDecrypt, vigenereDecryptText);
-console.table(results);
+// Do all tests from config
+for (const element of config) {
+    console.log(element.name);
+    results = testingWorker(element.data, element.fn);
+    console.table(results);
+    results = [];
+}
