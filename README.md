@@ -2,6 +2,21 @@
 
 Hello everyone! This is the repository of my package on JavaScript "Caesar and Vigenere ciphers"
 
+## Table of contents
+  * [Motivation](#motivation)
+  * [Build status](#build-status)
+  * [Code style](#code-style)
+  * [Dependencies](#dependencies)
+  * [Features](#features)
+  * [Installation](#installation)
+  * [Importing](#importing)
+  * [Fast usage](#fast-usage)
+  * [API](#api)
+  * [Code Example](#code-example)
+  * [Tests](#tests)
+  * [Contributing](#contributing)
+  * [License](#license)
+
 ## Motivation
 
 I've always been interested in the topic of data encryption, but I didn't delve deeply into it. So I decided to do it on. At first there was an idea to do a [*CLI*](https://en.wikipedia.org/wiki/Command-line_interface) or an *[Electron](https://www.electronjs.org/) application*. But later it turned into a package for [*npm*](https://www.npmjs.com/).
