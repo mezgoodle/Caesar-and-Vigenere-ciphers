@@ -72,11 +72,17 @@
     "vigenereEncrypt": [
         [
             { "value": "unopinionated", "key": "express" }, "ykdgmfaskpkiv", "testSimple"
+        ],
+        [
+            { "value": "m a x", "key": "ab" }, "m b x", "testSimpleWithSpaces"
         ]
     ],
     "vigenereDecrypt": [
         [
             { "value": "ykdgmfaskpkiv", "key": "express" }, "unopinionated", "testSimple"
+        ],
+        [
+            { "value": "m b x", "key": "abc" }, "m a v", "testSimpleWithSpaces"
         ]
     ]
 }
