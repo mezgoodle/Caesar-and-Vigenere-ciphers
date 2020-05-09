@@ -23,7 +23,7 @@ const caesarEncrypt = (text = null, amount = null) => {
         let c = text[parseInt(i)];
 
         // If it's a letter...
-        if (c.match(/[a-z]/i)) {
+        if (isLetter(c)) {
 
             // Get its code
             let code = text.charCodeAt(i);
