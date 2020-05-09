@@ -45,8 +45,8 @@ const workerChar = (char, k, type = "e") => {
     let uppercase = isUpperCase(char);
     char = char.toLowerCase().charCodeAt(0);
     k = k.toLowerCase().charCodeAt(0);
-    a = "a".charCodeAt(0);
-    A = "A".charCodeAt(0);
+    let a = "a".charCodeAt(0);
+    let A = "A".charCodeAt(0);
     if (type === "d") {
         let t = a + ((char - a) - (k - a));
         if (t < a) t += 26;
@@ -62,8 +62,8 @@ const worker = (str, key, type) => {
     for (let i = 0; i < str.length; i++) {
         let char = str.charAt(i);
         if (isLetter(char)) {
-            k = key.charAt(keyIndex++ % key.length);
-            temp = workerChar(char, k, type);
+            let k = key.charAt(keyIndex++ % key.length);
+            let temp = workerChar(char, k, type);
             result += temp;
         } else {
             result += char;

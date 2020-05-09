@@ -96,15 +96,15 @@ key | `string` | `<required>` | `null`  | the key to decrypt the message with
 Here you can see small example of Vigenere worker
 
 ```js
-const worker = (str, key, fn) => {
+const worker = (str, key, type) => {
     key = keepLetters(key);
     let result = "",
         keyIndex = 0;
     for (let i = 0; i < str.length; i++) {
         let char = str.charAt(i);
         if (isLetter(char)) {
-            k = key.charAt(keyIndex++ % key.length);
-            temp = fn(char, k);
+            let k = key.charAt(keyIndex++ % key.length);
+            let temp = workerChar(char, k, type);
             result += temp;
         } else {
             result += char;
