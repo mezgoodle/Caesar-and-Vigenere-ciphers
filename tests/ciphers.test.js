@@ -9,7 +9,29 @@ const testingWorker = (data, name, fn) => {
     });
 };
 
-testingWorker(data.caesareEncrypt, "Testing Caesare encrypting", caesarEncrypt);
-testingWorker(data.caesareDecrypt, "Testing Caesare decrypting", caesarDecrypt);
-testingWorker(data.vigenereEncrypt, "Testing Vigenere encrypting", vigenereEncryptText);
-testingWorker(data.vigenereDecrypt, "Testing Vigenere decrypting", vigenereDecryptText);
+const config = [{
+        name: "Testing Caesare encrypting",
+        data: data.caesareEncrypt,
+        fn: caesarEncrypt
+    },
+    {
+        name: "Testing Caesare decrypting",
+        data: data.caesareDecrypt,
+        fn: caesarDecrypt
+    },
+    {
+        name: "Testing Vigenere encrypting",
+        data: data.vigenereEncrypt,
+        fn: vigenereEncryptText
+    },
+    {
+        name: "Testing Vigenere decrypting",
+        data: data.vigenereDecrypt,
+        fn: vigenereDecryptText
+    }
+];
+
+// Do all tests from config
+for (const element of config) {
+    testingWorker(element.data, element.name, element.fn);
+};
