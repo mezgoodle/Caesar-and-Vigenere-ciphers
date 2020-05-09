@@ -29,6 +29,7 @@ Here you can build status of [continuous integration](https://en.wikipedia.org/w
 [![Build Status](https://travis-ci.com/mezgoodle/Caesar-and-Vigenere-ciphers.svg?branch=master)](https://travis-ci.com/mezgoodle/Caesar-and-Vigenere-ciphers)
 [![pipeline status](https://gitlab.com/Zavalniuk/Caesar-and-Vigenere-ciphers/badges/master/pipeline.svg)](https://gitlab.com/Zavalniuk/Caesar-and-Vigenere-ciphers/-/commits/master)
 [![Build Status](https://dev.azure.com/mezgoodle/mezgoodle/_apis/build/status/mezgoodle.Caesar-and-Vigenere-ciphers?branchName=master)](https://dev.azure.com/mezgoodle/mezgoodle/_build/latest?definitionId=2&branchName=master)
+![npm](https://img.shields.io/npm/dt/@mezgoodle/caesar-and-vigenere-ciphers)
 ![node-current](https://img.shields.io/node/v/jest)
 
 ## Code style
