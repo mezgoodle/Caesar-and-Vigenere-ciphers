@@ -38,7 +38,9 @@ I'm using [Codacy](https://www.codacy.com/) for automate my code quality.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c4a0fd48cea64b4aa06936c12d853856)](https://www.codacy.com/manual/mezgoodle/Caesar-and-Vigenere-ciphers?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mezgoodle/Caesar-and-Vigenere-ciphers&amp;utm_campaign=Badge_Grade)
 
-## Dependencies 
+## Dependencies
+
+![David](https://img.shields.io/david/dev/mezgoodle/Caesar-and-Vigenere-ciphers)
 
 I'm using only [jest](https://jestjs.io/) for testing, but that's enough for unit-testing. You may not install it.
 
