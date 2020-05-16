@@ -75,6 +75,24 @@
         ],
         [
             { "value": "m a x", "key": "ab" }, "m b x", "testSimpleWithSpaces"
+        ],
+        [
+            { "value": "dfsf1dasd", "key": "qwerty" }, "tbww1wyiz", "testSimpleWithDigits"
+        ],
+        [
+            { "value": "qaz", "key": "" }, "qaz", "testZeroKey"
+        ],
+        [
+            { "value": "jdjFTdjK", "key": "qwasz" }, "zzjXStfK", "testUpperLowerCase"
+        ],
+        [
+            { "value": "aba", "key": "a1b" }, "aca", "testIntegersInKey"
+        ],
+        [
+            { "value": "adad!@#fda", "key": "a1b" }, "aeae!@#fea", "testSymbolsWithString"
+        ],
+        [
+            { "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus in ornare quam viverra orci.", "key": "nisl nunc mi" }, "Ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. Wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. Scgkvjmd vh btziem ifng ikhmezs zewv.", "testLongString"
         ]
     ],
     "vigenereDecrypt": [
@@ -83,6 +101,24 @@
         ],
         [
             { "value": "m b x", "key": "abc" }, "m a v", "testSimpleWithSpaces"
+        ],
+        [
+            { "value": "tbww1wyiz", "key": "qwerty" }, "dfsf1dasd", "testSimpleWithDigits"
+        ],
+        [
+            { "value": "qaz", "key": "" }, "qaz", "testZeroKey"
+        ],
+        [
+            { "value": "zzjXStfK", "key": "qwasz" }, "jdjFTdjK", "testUpperLowerCase"
+        ],
+        [
+            { "value": "aca", "key": "a1b" }, "aba", "testIntegersInKey"
+        ],
+        [
+            { "value": "aeae!@#fea", "key": "a1b" }, "adad!@#fda", "testSymbolsWithString"
+        ],
+        [
+            { "value": "ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. scgkvjmd vh btziem ifng ikhmezs zewv.", "key": "nisl nunc mi" }, "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. faucibus in ornare quam viverra orci.", "testLongString"
         ]
     ]
 }
