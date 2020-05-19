@@ -56,7 +56,7 @@ const workerChar = (char, k, type = "e") => {
 };
 
 const worker = (str, key, type) => {
-    if (str === null || str === "" || key === null || key === "") throw Error("Message and key should be not empty");
+    if (str === null || key === null) throw Error("Message and key should be not empty");
     key = keepLetters(key);
     let result = "",
         keyIndex = 0;

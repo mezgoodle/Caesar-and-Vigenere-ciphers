@@ -115,6 +115,7 @@ Here you can see small example of Vigenere worker
 
 ```js
 const worker = (str, key, type) => {
+    if (str === null || key === null) throw Error("Message and key should be not empty");
     key = keepLetters(key);
     let result = "",
         keyIndex = 0;
