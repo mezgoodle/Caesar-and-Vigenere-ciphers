@@ -145,9 +145,9 @@ const worker = (str, key, type, lang) => {
 
 Unit-testing with **assert** and **jest**:
 
-![Test-1](https://github.com/mezgoodle/images/blob/master/Caesar-and-Vigenere-ciphers-1.png)
+>Early here were screenshots
 
-![Test-2](https://github.com/mezgoodle/images/blob/master/Caesar-and-Vigenere-ciphers-2.png)
+Number of my tests is more than 50, so I can't just do screenshot :smile:. I give you the [link](https://travis-ci.com/github/mezgoodle/Caesar-and-Vigenere-ciphers) to [Travis CI](https://travis-ci.org/), where you can see all my tests.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
