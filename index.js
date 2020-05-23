@@ -15,10 +15,14 @@ const caesarEncrypt = (text = null, amount = null) => {
         if (isLetter(c)) {
             // Get its code
             let code = text.charCodeAt(i);
-            // Uppercase letters
+            // Latin uppercase letters
             if ((code >= 65) && (code <= 90)) c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
-            // Lowercase letters
+            // Cyrillic uppercase letters
+            else if ((code >= 1040) && (code <= 1071)) c = String.fromCharCode(((code - 1040 + amount) % 26) + 1040);
+            // Latin lowercase letters
             else if ((code >= 97) && (code <= 122)) c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
+            // Cyrillic lowercase letters
+            else if ((code >= 1072) && (code <= 1103)) c = String.fromCharCode(((code - 1072 + amount) % 26) + 1072);
         };
         // Append
         output += c;
@@ -34,11 +38,11 @@ const caesarDecrypt = (text, shift) => {
     return result;
 };
 
-const keepLetters = (s) => (s.replace(/[^a-zA-Z]+/g, ""));
+const keepLetters = (s) => (s.replace(/[^a-zA-Zа-яА-Я]+/g, ""));
 
-const isLetter = (c) => (c.match(/[a-zA-Z]+/));
+const isLetter = (c) => (c.match(/[a-zA-Zа-яА-Я]+/));
 
-const isUpperCase = (c) => (c.match(/[A-Z]+/));
+const isUpperCase = (c) => (c.match(/[A-ZА-Я]+/));
 
 const workerChar = (char, k, type = "e") => {
     if (!isLetter(char) || !isLetter(k)) return char;
