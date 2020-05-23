@@ -68,45 +68,53 @@ const { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText }
 ## Fast usage
 
 ```js
-console.log(caesarEncrypt("pellentesque", 12));
+console.log(caesarEncrypt("pellentesque", 12, "lat"));
 // expected output: bqxxqzfqecgq
-console.log(caesarDecrypt("pellentesque", -12));
+console.log(caesarEncrypt("привет", 2, "cyr"));
+// expected output: сткдзф
+console.log(caesarDecrypt("pellentesque", -12, "lat"));
 // expected output: bqxxqzfqecgq
-console.log(vigenereEncryptText("unopinionated", "express"));
+console.log(caesarDecrypt("сткдзф", 2, "cyr"));
+// expected output: привет
+console.log(vigenereEncryptText("unopinionated", "express", "lat"));
 // expected output: ykdgmfaskpkiv
-console.log(vigenereDecryptText("ykdgmfaskpkiv", "express"));
+console.log(vigenereDecryptText("ykdgmfaskpkiv", "express", "lat"));
 // expected output: unopinionated
 ```
 
 ## API
 
-### caesarEncrypt( value, amount )
+### caesarEncrypt( value, amount, type )
 
 Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 value     | `string` | `<required>` | `null`  | the message to encrypt
 amount | `number` | `<required>` | `null`  | the key to encrypt the message with
+type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
 
-### caesarDecrypt( value, amount )
+### caesarDecrypt( value, amount, type )
 
 Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 value     | `string` | `<required>` | `null`  | the message to decrypt
 amount | `number` | `<required>` | `null`  | the key to decrypt the message with
+type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
 
-### vigenereEncryptText( text, key )
+### vigenereEncryptText( text, key, type )
 
 Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 text     | `string` | `<required>` | `null`  | the message to encrypt
 key | `string` | `<required>` | `null`  | the key to encrypt the message with
+type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
 
-### vigenereDecryptText( text, key )
+### vigenereDecryptText( text, key, type )
 
 Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 text     | `string` | `<required>` | `null`  | the message to decrypt
 key | `string` | `<required>` | `null`  | the key to decrypt the message with
+type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
 
 
 ## Code Example
@@ -114,7 +122,7 @@ key | `string` | `<required>` | `null`  | the key to decrypt the message with
 Here you can see small example of Vigenere worker
 
 ```js
-const worker = (str, key, type) => {
+const worker = (str, key, type, lang) => {
     if (str === null || key === null) throw Error("Message and key should be not empty");
     key = keepLetters(key);
     let result = "",
