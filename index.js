@@ -18,11 +18,11 @@ const caesarEncrypt = (text = null, amount = null) => {
             // Latin uppercase letters
             if ((code >= 65) && (code <= 90)) c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
             // Cyrillic uppercase letters
-            else if ((code >= 1040) && (code <= 1071)) c = String.fromCharCode(((code - 1040 + amount) % 26) + 1040);
+            else if ((code >= 1040) && (code <= 1071)) c = String.fromCharCode(((code - 1040 + amount) % 32) + 1040);
             // Latin lowercase letters
             else if ((code >= 97) && (code <= 122)) c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
             // Cyrillic lowercase letters
-            else if ((code >= 1072) && (code <= 1103)) c = String.fromCharCode(((code - 1072 + amount) % 26) + 1072);
+            else if ((code >= 1072) && (code <= 1105)) c = String.fromCharCode(((code - 1072 + amount) % 32) + 1072);
         };
         // Append
         output += c;
