@@ -66,10 +66,19 @@
             { "value": "b1m", "key": 15, "type": "lat" }, "m1x", "testSimpleWithDigits"
         ],
         [
+            { "value": "рти12йпа", "key": 4, "type": "cyr" }, "мод12ель", "testSimpleWithDigitsCyrillic"
+        ],
+        [
             { "value": "u my Ymj", "key": 12, "type": "lat" }, "i am Max", "testSimpleWithSpaces"
         ],
         [
+            { "value": "хмтзснзпкз к твйдкфкз уфтхмфхтэ", "key": 2, "type": "cyr" }, "укрепление и развитие структуры", "testSimpleWithSpacesCyrillic"
+        ],
+        [
             { "value": "bcdefghijkklmnopqrstuvwxyza", "key": 0, "type": "lat" }, "bcdefghijkklmnopqrstuvwxyza", "testZeroAmount"
+        ],
+        [
+            { "value": "активности", "key": 0, "type": "cyr" }, "активности", "testZeroAmountCyrillic"
         ],
         [
             { "value": "pellentesque", "key": -12, "type": "lat" }, "bqxxqzfqecgq", "testSimpleReverse"
@@ -78,7 +87,13 @@
             { "value": "BZECjxyBue", "key": 25, "type": "lat" }, "CAFDkyzCvf", "testUpperLowerCase"
         ],
         [
+            { "value": "АЯшУяьрЫг", "key": 17, "type": "cyr" }, "ПОзВоляКт", "testUpperLowerCaseCyrillic"
+        ],
+        [
             { "value": "YtHy#weQ^LVt", "key": 7, "type": "lat" }, "RmAr#pxJ^EOm", "testStringWithSymbols"
+        ],
+        [
+            { "value": "бЕ_еб", "key": 1, "type": "cyr" }, "аД_да", "testStringWithSymbolsCyrillic"
         ],
         [
             { "value": "13123131", "key": 5, "type": "lat" }, "13123131", "testIntegers"
@@ -90,7 +105,13 @@
             { "value": "!@$^@g", "key": -1970, "type": "lat" }, "!@$^@a", "testSymbolsWithString"
         ],
         [
+            { "value": "!@$^@о", "key": -1970, "type": "cyr" }, "!@$^@а", "testSymbolsWithStringCyrillic"
+        ],
+        [
             { "value": "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "key": 10, "type": "lat" }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "testLongString"
+        ],
+        [
+            { "value": "Шипхццйшипхгс р йцлиъгс цчгъ хцкиз фцмнуд цшлихрпиюрцххцс мнзънудхцщър", "key": 8, "type": "cyr" }, "Разнообразный и богатый опыт новая модель организационной деятельности", "testLongStringCyrillic"
         ]
     ],
     "vigenereEncrypt": [
