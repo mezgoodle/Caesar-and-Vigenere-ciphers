@@ -78,8 +78,12 @@ console.log(caesarDecrypt("сткдзф", 2, "cyr"));
 // expected output: привет
 console.log(vigenereEncryptText("unopinionated", "express", "lat"));
 // expected output: ykdgmfaskpkiv
+console.log(vigenereEncryptText("Карл у Клары украл кораллы", "кларнет", "cyr"));
+// expected output: Флры а Пэкыы гчхтх хоанрэе
 console.log(vigenereDecryptText("ykdgmfaskpkiv", "express", "lat"));
 // expected output: unopinionated
+console.log(vigenereDecryptText("Флры а Пэкыы гчхтх хоанрэе", "кларнет", "cyr"));
+// expected output: Карл у Клары украл кораллы
 ```
 
 ## API
