@@ -116,54 +116,90 @@
     ],
     "vigenereEncrypt": [
         [
-            { "value": "unopinionated", "key": "express" }, "ykdgmfaskpkiv", "testSimple"
+            { "value": "unopinionated", "key": "express", "type": "lat" }, "ykdgmfaskpkiv", "testSimple"
         ],
         [
-            { "value": "m a x", "key": "ab" }, "m b x", "testSimpleWithSpaces"
+            { "value": "Карл у Клары украл кораллы", "key": "кларнет", "type": "cyr" }, "Флры а Пэкыы гчхтх хоанрэе", "testSimpleCyrillic"
         ],
         [
-            { "value": "dfsf1dasd", "key": "qwerty" }, "tbww1wyiz", "testSimpleWithDigits"
+            { "value": "m a x", "key": "ab", "type": "lat" }, "m b x", "testSimpleWithSpaces"
         ],
         [
-            { "value": "qaz", "key": "" }, "qaz", "testZeroKey"
+            { "value": "dfsf1dasd", "key": "qwerty", "type": "lat" }, "tbww1wyiz", "testSimpleWithDigits"
         ],
         [
-            { "value": "jdjFTdjK", "key": "qwasz" }, "zzjXStfK", "testUpperLowerCase"
+            { "value": "Ка13рл", "key": "арг", "type": "cyr" }, "Кр13ул", "testSimpleWithDigitsCyrillic"
         ],
         [
-            { "value": "aba", "key": "a1b" }, "aca", "testIntegersInKey"
+            { "value": "qaz", "key": "", "type": "lat" }, "qaz", "testZeroKey"
         ],
         [
-            { "value": "adad!@#fda", "key": "a1b" }, "aeae!@#fea", "testSymbolsWithString"
+            { "value": "газуф", "key": "", "type": "cyr" }, "газуф", "testZeroKeyCyrillic"
         ],
         [
-            { "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus in ornare quam viverra orci.", "key": "nisl nunc mi" }, "Ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. Wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. Scgkvjmd vh btziem ifng ikhmezs zewv.", "testLongString"
+            { "value": "jdjFTdjK", "key": "qwasz", "type": "lat" }, "zzjXStfK", "testUpperLowerCase"
+        ],
+        [
+            { "value": "aba", "key": "a1b", "type": "lat" }, "aca", "testIntegersInKey"
+        ],
+        [
+            { "value": "аба", "key": "а1б", "type": "cyr" }, "ава", "testIntegersInKeyCyrillic"
+        ],
+        [
+            { "value": "adad!@#fda", "key": "a1b", "type": "lat" }, "aeae!@#fea", "testSymbolsWithString"
+        ],
+        [
+            { "value": "фвфв!@#два", "key": "б", "type": "cyr" }, "хгхг!@#егб", "testSymbolsWithStringCyrillic"
+        ],
+        [
+            { "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus in ornare quam viverra orci.", "key": "nisl nunc mi", "type": "lat" }, "Ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. Wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. Scgkvjmd vh btziem ifng ikhmezs zewv.", "testLongString"
+        ],
+        [
+            { "value": "Равным образом рамки и место обучения кадров требуют", "key": "летер", "type": "cyr" }, "Ыефтлч уухртую хрчпъ н ьрцду юмшйкэуд ьефыуф чаржегв", "testLongStringCyrillic"
         ]
     ],
     "vigenereDecrypt": [
         [
-            { "value": "ykdgmfaskpkiv", "key": "express" }, "unopinionated", "testSimple"
+            { "value": "ykdgmfaskpkiv", "key": "express", "type": "lat" }, "unopinionated", "testSimple"
         ],
         [
-            { "value": "m b x", "key": "abc" }, "m a v", "testSimpleWithSpaces"
+            { "value": "Флры а Пэкыы гчхтх хоанрэе", "key": "кларнет", "type": "cyr" }, "Карл у Клары украл кораллы", "testSimpleCyrillic"
         ],
         [
-            { "value": "tbww1wyiz", "key": "qwerty" }, "dfsf1dasd", "testSimpleWithDigits"
+            { "value": "m b x", "key": "abc", "type": "lat" }, "m a v", "testSimpleWithSpaces"
         ],
         [
-            { "value": "qaz", "key": "" }, "qaz", "testZeroKey"
+            { "value": "tbww1wyiz", "key": "qwerty", "type": "lat" }, "dfsf1dasd", "testSimpleWithDigits"
         ],
         [
-            { "value": "zzjXStfK", "key": "qwasz" }, "jdjFTdjK", "testUpperLowerCase"
+            { "value": "Кр13ул", "key": "арг", "type": "cyr" }, "Ка13рл", "testSimpleWithDigitsCyrillic"
         ],
         [
-            { "value": "aca", "key": "a1b" }, "aba", "testIntegersInKey"
+            { "value": "qaz", "key": "", "type": "lat" }, "qaz", "testZeroKey"
         ],
         [
-            { "value": "aeae!@#fea", "key": "a1b" }, "adad!@#fda", "testSymbolsWithString"
+            { "value": "газуф", "key": "", "type": "cyr" }, "газуф", "testZeroKeyCyrillic"
         ],
         [
-            { "value": "ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. scgkvjmd vh btziem ifng ikhmezs zewv.", "key": "nisl nunc mi" }, "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. faucibus in ornare quam viverra orci.", "testLongString"
+            { "value": "zzjXStfK", "key": "qwasz", "type": "lat" }, "jdjFTdjK", "testUpperLowerCase"
+        ],
+        [
+            { "value": "aca", "key": "a1b", "type": "lat" }, "aba", "testIntegersInKey"
+        ],
+        [
+            { "value": "ава", "key": "а1б", "type": "cyr" }, "аба", "testIntegersInKeyCyrillic"
+        ],
+        [
+            { "value": "aeae!@#fea", "key": "a1b", "type": "lat" }, "adad!@#fda", "testSymbolsWithString"
+        ],
+        [
+            { "value": "хгхг!@#егб", "key": "б", "type": "cyr" }, "фвфв!@#два", "testSymbolsWithStringCyrillic"
+        ],
+        [
+            { "value": "ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. scgkvjmd vh btziem ifng ikhmezs zewv.", "key": "nisl nunc mi", "type": "lat" }, "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. faucibus in ornare quam viverra orci.", "testLongString"
+        ],
+        [
+            { "value": "Ыефтлч уухртую хрчпъ н ьрцду юмшйкэуд ьефыуф чаржегв", "key": "летер", "type": "cyr" }, "Равным образом рамки и место обучения кадров требуют", "testLongStringCyrillic"
         ]
     ]
 }
