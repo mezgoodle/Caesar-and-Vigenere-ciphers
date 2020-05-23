@@ -5,7 +5,7 @@ const typeDefine = {
     "lat": [26, 65, 90, 97, 122],
 };
 
-const caesarEncrypt = (text = null, amount = null, type = "lat") => {
+const caesarEncrypt = (text = null, amount = null, type = null) => {
     if (text === null) throw Error("Message should be not empty");
     if (!Number.isInteger(amount) || amount === null) throw Error("Amount should be integer and not empty");
     if (typeof(text) !== "string") throw Error("String or number expected");
@@ -85,8 +85,9 @@ const worker = (str, key, type, lang) => {
     return result;
 };
 
-const vigenereEncryptText = (text = null, key = null, type = "lat") => (worker(text, key, "e", type));
+const vigenereEncryptText = (text = null, key = null, type = null) => (worker(text, key, "e", type));
 
-const vigenereDecryptText = (cipher = null, key = null, type = "lat") => (worker(cipher, key, "d", type));
+const vigenereDecryptText = (cipher = null, key = null, type = null) => (worker(cipher, key, "d", type));
 
 module.exports = { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText };
+console.log(caesarEncrypt("a", 1, "lat"));

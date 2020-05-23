@@ -90,7 +90,7 @@ Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 value     | `string` | `<required>` | `null`  | the message to encrypt
 amount | `number` | `<required>` | `null`  | the key to encrypt the message with
-type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
+type | `string` | `<required>` | `null`  | the type of language: latin or cyrillic
 
 ### caesarDecrypt( value, amount, type )
 
@@ -98,7 +98,7 @@ Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 value     | `string` | `<required>` | `null`  | the message to decrypt
 amount | `number` | `<required>` | `null`  | the key to decrypt the message with
-type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
+type | `string` | `<required>` | `null`  | the type of language: latin or cyrillic
 
 ### vigenereEncryptText( text, key, type )
 
@@ -106,7 +106,7 @@ Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 text     | `string` | `<required>` | `null`  | the message to encrypt
 key | `string` | `<required>` | `null`  | the key to encrypt the message with
-type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
+type | `string` | `<required>` | `null`  | the type of language: latin or cyrillic
 
 ### vigenereDecryptText( text, key, type )
 
@@ -114,7 +114,7 @@ Name    | Type     | Argument     | Default | Description
 --------|----------|--------------|---------|------------
 text     | `string` | `<required>` | `null`  | the message to decrypt
 key | `string` | `<required>` | `null`  | the key to decrypt the message with
-type | `string` | `<required>` | `"lat"`  | the type of language: latin or cyrillic
+type | `string` | `<required>` | `null`  | the type of language: latin or cyrillic
 
 
 ## Code Example
