@@ -4,13 +4,25 @@
             { "value": "pellentesque", "key": 12 }, "bqxxqzfqecgq", "testSimple"
         ],
         [
+            { "value": "Разнообразный ", "key": 2 }, "Твйпрргтвйпэл ", "testSimpleCyrillic"
+        ],
+        [
             { "value": "m1x", "key": 7 }, "t1e", "testSimpleWithDigits"
+        ],
+        [
+            { "value": "мод12ель", "key": 4 }, "рти12йпа", "testSimpleWithDigitsCyrillic"
         ],
         [
             { "value": "i am Max", "key": 5 }, "n fr Rfc", "testSimpleWithSpaces"
         ],
         [
+            { "value": "укрепление и развитие структуры", "key": 2 }, "хмтзснзпкз к твйдкфкз уфтхмфхтэ", "testSimpleWithSpacesCyrillic"
+        ],
+        [
             { "value": "pellentesque", "key": 0 }, "pellentesque", "testZeroAmount"
+        ],
+        [
+            { "value": "активности", "key": 0 }, "активности", "testZeroAmountCyrillic"
         ],
         [
             { "value": "bqxxqzfqecgq", "key": -12 }, "pellentesque", "testSimpleReverse"
@@ -19,7 +31,13 @@
             { "value": "adadA", "key": 13123 }, "twtwT", "testUpperLowerCase"
         ],
         [
+            { "value": "ПОзВоляКт", "key": 17 }, "АЯшУяьрЫг", "testUpperLowerCaseCyrillic"
+        ],
+        [
             { "value": "ad_dA", "key": 1 }, "be_eB", "testStringWithSymbols"
+        ],
+        [
+            { "value": "аД_да", "key": 1 }, "бЕ_еб", "testStringWithSymbolsCyrillic"
         ],
         [
             { "value": "13123131", "key": 5 }, "13123131", "testIntegers"
@@ -31,7 +49,13 @@
             { "value": "!@$^@a", "key": -1970 }, "!@$^@g", "testSymbolsWithString"
         ],
         [
+            { "value": "!@$^@а", "key": -1970 }, "!@$^@ж", "testSymbolsWithStringCyrillic"
+        ],
+        [
             { "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "key": 10 }, "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "testLongString"
+        ],
+        [
+            { "value": "Разнообразный и богатый опыт новая модель организационной деятельности", "key": 8 }, "Шипхццйшипхгс р йцлиъгс цчгъ хцкиз фцмнуд цшлихрпиюрцххцс мнзънудхцщър", "testLongStringCyrillic"
         ]
     ],
     "caesareDecrypt": [
