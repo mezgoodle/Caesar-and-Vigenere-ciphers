@@ -4,7 +4,7 @@ const data = require("./data.json");
 const testingWorker = (data, name, fn) => {
     describe.each(data)(name, (params, expected, name) => {
         test(name, () => {
-            expect(fn(params.value, params.key)).toBe(expected);
+            expect(fn(params.value, params.key, params.type)).toBe(expected);
         });
     });
 };

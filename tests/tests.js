@@ -6,7 +6,7 @@ const testingWorker = (data, fn) => {
     let results = [];
     for (const test of data) {
         const [params, expected, name] = test;
-        const result = fn(params.value, params.key);
+        const result = fn(params.value, params.key, params.type);
         try {
             assert.strictEqual(result, expected, `Error in test "${name}"`);
         } catch (err) {

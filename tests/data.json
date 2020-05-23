@@ -1,96 +1,96 @@
 {
     "caesareEncrypt": [
         [
-            { "value": "pellentesque", "key": 12 }, "bqxxqzfqecgq", "testSimple"
+            { "value": "pellentesque", "key": 12, "type": "lat" }, "bqxxqzfqecgq", "testSimple"
         ],
         [
-            { "value": "Разнообразный ", "key": 2 }, "Твйпрргтвйпэл ", "testSimpleCyrillic"
+            { "value": "Разнообразный ", "key": 2, "type": "cyr" }, "Твйпрргтвйпэл ", "testSimpleCyrillic"
         ],
         [
-            { "value": "m1x", "key": 7 }, "t1e", "testSimpleWithDigits"
+            { "value": "m1x", "key": 7, "type": "lat" }, "t1e", "testSimpleWithDigits"
         ],
         [
-            { "value": "мод12ель", "key": 4 }, "рти12йпа", "testSimpleWithDigitsCyrillic"
+            { "value": "мод12ель", "key": 4, "type": "cyr" }, "рти12йпа", "testSimpleWithDigitsCyrillic"
         ],
         [
-            { "value": "i am Max", "key": 5 }, "n fr Rfc", "testSimpleWithSpaces"
+            { "value": "i am Max", "key": 5, "type": "lat" }, "n fr Rfc", "testSimpleWithSpaces"
         ],
         [
-            { "value": "укрепление и развитие структуры", "key": 2 }, "хмтзснзпкз к твйдкфкз уфтхмфхтэ", "testSimpleWithSpacesCyrillic"
+            { "value": "укрепление и развитие структуры", "key": 2, "type": "cyr" }, "хмтзснзпкз к твйдкфкз уфтхмфхтэ", "testSimpleWithSpacesCyrillic"
         ],
         [
-            { "value": "pellentesque", "key": 0 }, "pellentesque", "testZeroAmount"
+            { "value": "pellentesque", "key": 0, "type": "lat" }, "pellentesque", "testZeroAmount"
         ],
         [
-            { "value": "активности", "key": 0 }, "активности", "testZeroAmountCyrillic"
+            { "value": "активности", "key": 0, "type": "cyr" }, "активности", "testZeroAmountCyrillic"
         ],
         [
-            { "value": "bqxxqzfqecgq", "key": -12 }, "pellentesque", "testSimpleReverse"
+            { "value": "adadA", "key": -12000, "type": "lat" }, "mpmpM", "testUpperLowerCase"
         ],
         [
-            { "value": "adadA", "key": 13123 }, "twtwT", "testUpperLowerCase"
+            { "value": "ПОзВоляКт", "key": 17, "type": "cyr" }, "АЯшУяьрЫг", "testUpperLowerCaseCyrillic"
         ],
         [
-            { "value": "ПОзВоляКт", "key": 17 }, "АЯшУяьрЫг", "testUpperLowerCaseCyrillic"
+            { "value": "ad_dA", "key": 1, "type": "lat" }, "be_eB", "testStringWithSymbols"
         ],
         [
-            { "value": "ad_dA", "key": 1 }, "be_eB", "testStringWithSymbols"
+            { "value": "аД_да", "key": 1, "type": "cyr" }, "бЕ_еб", "testStringWithSymbolsCyrillic"
         ],
         [
-            { "value": "аД_да", "key": 1 }, "бЕ_еб", "testStringWithSymbolsCyrillic"
+            { "value": "13123131", "key": 5, "type": "lat" }, "13123131", "testIntegers"
         ],
         [
-            { "value": "13123131", "key": 5 }, "13123131", "testIntegers"
+            { "value": "!@&*^", "key": -12000, "type": "lat" }, "!@&*^", "testSymbols"
         ],
         [
-            { "value": "!@&*^", "key": -134353 }, "!@&*^", "testSymbols"
+            { "value": "!@$^@a", "key": -1970, "type": "lat" }, "!@$^@g", "testSymbolsWithString"
         ],
         [
-            { "value": "!@$^@a", "key": -1970 }, "!@$^@g", "testSymbolsWithString"
+            { "value": "!@$^@а", "key": -1970, "type": "cyr" }, "!@$^@о", "testSymbolsWithStringCyrillic"
         ],
         [
-            { "value": "!@$^@а", "key": -1970 }, "!@$^@ж", "testSymbolsWithStringCyrillic"
+            { "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "key": 10, "type": "lat" }, "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "testLongString"
         ],
         [
-            { "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "key": 10 }, "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "testLongString"
-        ],
-        [
-            { "value": "Разнообразный и богатый опыт новая модель организационной деятельности", "key": 8 }, "Шипхццйшипхгс р йцлиъгс цчгъ хцкиз фцмнуд цшлихрпиюрцххцс мнзънудхцщър", "testLongStringCyrillic"
+            { "value": "Разнообразный и богатый опыт новая модель организационной деятельности", "key": 8, "type": "cyr" }, "Шипхццйшипхгс р йцлиъгс цчгъ хцкиз фцмнуд цшлихрпиюрцххцс мнзънудхцщър", "testLongStringCyrillic"
         ]
     ],
     "caesareDecrypt": [
         [
-            { "value": "opqrstuvwxxyzabcdefghijklm", "key": 14 }, "abcdefghijjklmnopqrstuvwxy", "testSimple"
+            { "value": "opqrstuvwxxyzabcdefghijklm", "key": 14, "type": "lat" }, "abcdefghijjklmnopqrstuvwxy", "testSimple"
         ],
         [
-            { "value": "b1m", "key": 15 }, "m1x", "testSimpleWithDigits"
+            { "value": "Твйпрргтвйпэл ", "key": 2, "type": "cyr" }, "Разнообразный ", "testSimpleCyrillic"
         ],
         [
-            { "value": "u my Ymj", "key": 12 }, "i am Max", "testSimpleWithSpaces"
+            { "value": "b1m", "key": 15, "type": "lat" }, "m1x", "testSimpleWithDigits"
         ],
         [
-            { "value": "bcdefghijkklmnopqrstuvwxyza", "key": 0 }, "bcdefghijkklmnopqrstuvwxyza", "testZeroAmount"
+            { "value": "u my Ymj", "key": 12, "type": "lat" }, "i am Max", "testSimpleWithSpaces"
         ],
         [
-            { "value": "pellentesque", "key": -12 }, "bqxxqzfqecgq", "testSimpleReverse"
+            { "value": "bcdefghijkklmnopqrstuvwxyza", "key": 0, "type": "lat" }, "bcdefghijkklmnopqrstuvwxyza", "testZeroAmount"
         ],
         [
-            { "value": "BZECjxyBue", "key": 25 }, "CAFDkyzCvf", "testUpperLowerCase"
+            { "value": "pellentesque", "key": -12, "type": "lat" }, "bqxxqzfqecgq", "testSimpleReverse"
         ],
         [
-            { "value": "YtHy#weQ^LVt", "key": 7 }, "RmAr#pxJ^EOm", "testStringWithSymbols"
+            { "value": "BZECjxyBue", "key": 25, "type": "lat" }, "CAFDkyzCvf", "testUpperLowerCase"
         ],
         [
-            { "value": "13123131", "key": 5 }, "13123131", "testIntegers"
+            { "value": "YtHy#weQ^LVt", "key": 7, "type": "lat" }, "RmAr#pxJ^EOm", "testStringWithSymbols"
         ],
         [
-            { "value": "!@&*^", "key": -134353 }, "!@&*^", "testSymbols"
+            { "value": "13123131", "key": 5, "type": "lat" }, "13123131", "testIntegers"
         ],
         [
-            { "value": "!@$^@g", "key": -1970 }, "!@$^@a", "testSymbolsWithString"
+            { "value": "!@&*^", "key": -1343, "type": "lat" }, "!@&*^", "testSymbols"
         ],
         [
-            { "value": "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "key": 10 }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "testLongString"
+            { "value": "!@$^@g", "key": -1970, "type": "lat" }, "!@$^@a", "testSymbolsWithString"
+        ],
+        [
+            { "value": "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "key": 10, "type": "lat" }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "testLongString"
         ]
     ],
     "vigenereEncrypt": [
