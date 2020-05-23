@@ -1,8 +1,8 @@
 'use strict';
 
 const typeDefine = {
-    "cyr": [32, 1040, 1071, 1072, 1105],
-    "lat": [26, 65, 90, 97, 122],
+    "cyr": { alpha_num: 32, start_code_u: 1040, finish_code_u: 1071, start_code_l: 1072, finish_code_l: 1105 },
+    "lat": { alpha_num: 26, start_code_u: 65, finish_code_u: 90, start_code_l: 97, finish_code_l: 122 },
 };
 
 const caesarEncrypt = (text = null, amount = null, type = null) => {
@@ -11,7 +11,7 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
     if (typeof(text) !== "string") throw Error("String or number expected");
     // Type define
     if (!typeDefine.hasOwnProperty(type)) throw Error("Type must be \"lat\" or \"cyr\"");
-    const [alpha_num, start_code_l, finish_code_l, start_code_u, finish_code_u] = typeDefine[type];
+    const { alpha_num, start_code_u, finish_code_u, start_code_l, finish_code_l } = typeDefine[type];
     // Wrap the amount
     if (amount < 0) return caesarEncrypt(text, amount + alpha_num, type);
 
@@ -39,7 +39,7 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
 
 const caesarDecrypt = (text, shift, type) => {
     if (!typeDefine.hasOwnProperty(type)) throw Error("Type must be \"lat\" or \"cyr\"");
-    const [alpha_num] = typeDefine[type];
+    const { alpha_num } = typeDefine[type];
     let result = "";
     shift = (alpha_num - shift) % alpha_num;
     result = caesarEncrypt(text, shift, type);
@@ -52,22 +52,24 @@ const isLetter = (c) => (c.match(/[a-zA-Zа-яА-Я]+/));
 
 const isUpperCase = (c) => (c.match(/[A-ZА-Я]+/));
 
-const workerChar = (char, k, type = "e") => {
+const workerChar = (char, k, type = "e", lang) => {
     if (!isLetter(char) || !isLetter(k)) return char;
     let uppercase = isUpperCase(char);
     char = char.toLowerCase().charCodeAt(0);
     k = k.toLowerCase().charCodeAt(0);
-    let a = "a".charCodeAt(0);
-    let A = "A".charCodeAt(0);
+    const { alpha_num, start_code_u, start_code_l } = typeDefine[lang];
+    let a = start_code_l;
+    let A = start_code_u;
     if (type === "d") {
         let t = a + ((char - a) - (k - a));
-        if (t < a) t += 26;
+        if (t < a) t += alpha_num;
         t = String.fromCharCode(t);
         return uppercase ? t.toUpperCase() : t;
-    } else return String.fromCharCode((uppercase ? A : a) + (((char - a) + (k - a)) % 26));
+    } else return String.fromCharCode((uppercase ? A : a) + (((char - a) + (k - a)) % alpha_num));
 };
 
 const worker = (str, key, type, lang) => {
+    if (!typeDefine.hasOwnProperty(lang)) throw Error("Type must be \"lat\" or \"cyr\"");
     if (str === null || key === null) throw Error("Message and key should be not empty");
     key = keepLetters(key);
     let result = "",
@@ -76,7 +78,7 @@ const worker = (str, key, type, lang) => {
         let char = str.charAt(i);
         if (isLetter(char)) {
             let k = key.charAt(keyIndex++ % key.length);
-            let temp = workerChar(char, k, type);
+            let temp = workerChar(char, k, type, lang);
             result += temp;
         } else {
             result += char;
@@ -90,4 +92,3 @@ const vigenereEncryptText = (text = null, key = null, type = null) => (worker(te
 const vigenereDecryptText = (cipher = null, key = null, type = null) => (worker(cipher, key, "d", type));
 
 module.exports = { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText };
-console.log(caesarEncrypt("a", 1, "lat"));
