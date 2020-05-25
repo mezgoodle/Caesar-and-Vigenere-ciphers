@@ -6,9 +6,10 @@ const typeDefine = {
 };
 
 const caesarEncrypt = (text = null, amount = null, type = null) => {
+    if (typeof(amount) !== "number") throw Error("Amount must be number");
     if (text === null) throw Error("Message should be not empty");
     if (!Number.isInteger(amount) || amount === null) throw Error("Amount should be integer and not empty");
-    if (typeof(text) !== "string") throw Error("String or number expected");
+    if (typeof(text) !== "string") throw Error("Text must be String");
     // Type define
     if (!typeDefine.hasOwnProperty(type)) throw Error("Type must be \"lat\" or \"cyr\"");
     const { alpha_num, start_code_u, finish_code_u, start_code_l, finish_code_l } = typeDefine[type];
@@ -69,6 +70,7 @@ const workerChar = (char, k, type = "e", lang) => {
 };
 
 const worker = (str, key, type, lang) => {
+    if (typeof(key) !== "string" || typeof(str) !== "string") throw Error("Text and Key must be string");
     if (!typeDefine.hasOwnProperty(lang)) throw Error("Type must be \"lat\" or \"cyr\"");
     if (str === null || key === null) throw Error("Message and key should be not empty");
     key = keepLetters(key);
