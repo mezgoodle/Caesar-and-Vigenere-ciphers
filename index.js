@@ -77,7 +77,7 @@ const workerChar = (char, k, type = 'e', lang) => {
 const worker = (str, key, type, lang) => {
   if (typeof(key) !== 'string' || typeof(str) !== 'string')
     throw Error('Text and Key must be string');
-  if (!Object.prototype.hasOwnProperty.call(typeDefine, type))
+  if (!Object.prototype.hasOwnProperty.call(typeDefine, lang))
     throw Error('Type must be "lat" or "cyr"');
   if (str === null || key === null) throw Error('Message and key should be not empty');
   key = keepLetters(key);
