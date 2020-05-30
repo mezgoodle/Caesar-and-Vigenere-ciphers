@@ -1,6 +1,6 @@
 {
     "name": "@mezgoodle/caesar-and-vigenere-ciphers",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "description": "NPM package of caesar-and-vigenere-ciphers",
     "main": "index.js",
     "dependencies": {},
