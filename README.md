@@ -76,13 +76,13 @@ console.log(caesarDecrypt("pellentesque", -12, "lat"));
 // expected output: bqxxqzfqecgq
 console.log(caesarDecrypt("сткдзф", 2, "cyr"));
 // expected output: привет
-console.log(vigenereEncryptText("unopinionated", "express", "lat"));
+console.log(vigenereEncrypt("unopinionated", "express", "lat"));
 // expected output: ykdgmfaskpkiv
-console.log(vigenereEncryptText("Карл у Клары украл кораллы", "кларнет", "cyr"));
+console.log(vigenereEncrypt("Карл у Клары украл кораллы", "кларнет", "cyr"));
 // expected output: Флры а Пэкыы гчхтх хоанрэе
-console.log(vigenereDecryptText("ykdgmfaskpkiv", "express", "lat"));
+console.log(vigenereDecrypt("ykdgmfaskpkiv", "express", "lat"));
 // expected output: unopinionated
-console.log(vigenereDecryptText("Флры а Пэкыы гчхтх хоанрэе", "кларнет", "cyr"));
+console.log(vigenereDecrypt("Флры а Пэкыы гчхтх хоанрэе", "кларнет", "cyr"));
 // expected output: Карл у Клары украл кораллы
 ```
 
