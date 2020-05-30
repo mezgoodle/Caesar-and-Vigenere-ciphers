@@ -1,7 +1,7 @@
 'use strict';
 
 const { caesarEncrypt, caesarDecrypt,
-  vigenereEncryptText, vigenereDecryptText } = require('../index');
+  vigenereEncrypt, vigenereDecrypt } = require('../index');
 const data = require('./data.json');
 const assert = require('assert').strict;
 
@@ -36,12 +36,12 @@ const config = [{
 {
   name: 'Vigenere Encrypt',
   data: data.vigenereEncrypt,
-  fn: vigenereEncryptText
+  fn: vigenereEncrypt
 },
 {
   name: 'Vigenere Decrypt',
   data: data.vigenereDecrypt,
-  fn: vigenereDecryptText
+  fn: vigenereDecrypt
 }
 ];
 

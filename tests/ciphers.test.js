@@ -1,6 +1,6 @@
 'use strict';
 
-const { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText } = require('../index');
+const { caesarEncrypt, caesarDecrypt, vigenereEncrypt, vigenereDecrypt } = require('../index');
 const data = require('./data.json');
 
 const testingWorker = (data, name, fn) => {
@@ -24,12 +24,12 @@ const config = [{
 {
   name: 'Testing Vigenere encrypting',
   data: data.vigenereEncrypt,
-  fn: vigenereEncryptText
+  fn: vigenereEncrypt
 },
 {
   name: 'Testing Vigenere decrypting',
   data: data.vigenereDecrypt,
-  fn: vigenereDecryptText
+  fn: vigenereDecrypt
 }
 ];
 

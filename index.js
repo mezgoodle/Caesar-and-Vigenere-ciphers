@@ -29,20 +29,20 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
   // Go through each character
   for (let i = 0; i < text.length; i++) {
     // Get the character we'll be appending
-    let c = text[parseInt(i)];
+    let char = text[parseInt(i)];
     // If it's a letter...
-    if (isLetter(c)) {
+    if (isLetter(char)) {
       // Get its code
       const code = text.charCodeAt(i);
       // lowercase letters
       if ((code >= start_code_l) && (code <= finish_code_l))
-        c = String.fromCharCode(((code - start_code_l + amount) % alpha_num) + start_code_l);
+        char = String.fromCharCode(((code - start_code_l + amount) % alpha_num) + start_code_l);
       // Uppercase letters
       else if ((code >= start_code_u) && (code <= finish_code_u))
-        c = String.fromCharCode(((code - start_code_u + amount) % alpha_num) + start_code_u);
+        char = String.fromCharCode(((code - start_code_u + amount) % alpha_num) + start_code_u);
     }
     // Append
-    output += c;
+    output += char;
   }
   // All done!
   return output;
@@ -58,20 +58,20 @@ const caesarDecrypt = (text, shift, type) => {
   return result;
 };
 
-const workerChar = (char, k, type = 'e', lang) => {
-  if (!isLetter(char) || !isLetter(k)) return char;
+const workerChar = (char, key, type = 'e', lang) => {
+  if (!isLetter(char) || !isLetter(key)) return char;
   const uppercase = isUpperCase(char);
   char = char.toLowerCase().charCodeAt(0);
-  k = k.toLowerCase().charCodeAt(0);
+  key = key.toLowerCase().charCodeAt(0);
   const { alpha_num, start_code_u, start_code_l } = typeDefine[lang];
   const a = start_code_l;
   const A = start_code_u;
   if (type === 'd') {
-    let t = a + ((char - a) - (k - a));
-    if (t < a) t += alpha_num;
-    t = String.fromCharCode(t);
-    return uppercase ? t.toUpperCase() : t;
-  } else return String.fromCharCode((uppercase ? A : a) + (((char - a) + (k - a)) % alpha_num));
+    let temp = a + ((char - a) - (key - a));
+    if (temp < a) temp += alpha_num;
+    temp = String.fromCharCode(temp);
+    return uppercase ? temp.toUpperCase() : temp;
+  } else return String.fromCharCode((uppercase ? A : a) + (((char - a) + (key - a)) % alpha_num));
 };
 
 const worker = (str, key, type, lang) => {
@@ -86,8 +86,8 @@ const worker = (str, key, type, lang) => {
   for (let i = 0; i < str.length; i++) {
     const char = str.charAt(i);
     if (isLetter(char)) {
-      const k = key.charAt(keyIndex++ % key.length);
-      const temp = workerChar(char, k, type, lang);
+      const key_el = key.charAt(keyIndex++ % key.length);
+      const temp = workerChar(char, key_el, type, lang);
       result += temp;
     } else {
       result += char;
@@ -96,10 +96,10 @@ const worker = (str, key, type, lang) => {
   return result;
 };
 
-const vigenereEncryptText = (text = null, key = null, type = null) =>
-  (worker(text, key, 'e', type));
+const vigenereEncrypt = (text = null, key = null, lang = null) =>
+  (worker(text, key, 'e', lang));
 
-const vigenereDecryptText = (cipher = null, key = null, type = null) =>
-  (worker(cipher, key, 'd', type));
+const vigenereDecrypt = (cipher = null, key = null, lang = null) =>
+  (worker(cipher, key, 'd', lang));
 
-module.exports = { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText };
+module.exports = { caesarEncrypt, caesarDecrypt, vigenereEncrypt, vigenereDecrypt };
