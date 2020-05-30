@@ -10,7 +10,7 @@
     },
     "scripts": {
         "start": "node .",
-        "test": "node tests/tests.js && jest",
+        "test": "node tests/tests.js && jest && eslint ./",
         "lint": "eslint ./",
         "lint:fix": "eslint ./ --fix"
     },
