@@ -24,13 +24,9 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
   // Wrap the amount
   if (amount < 0) return caesarEncrypt(text, amount + alpha_num, type);
 
-  // Make an output letiable
   let output = '';
-  // Go through each character
   for (let i = 0; i < text.length; i++) {
-    // Get the character we'll be appending
-    let char = text[parseInt(i)];
-    // If it's a letter...
+    let char = text[i];
     if (isLetter(char)) {
       // Get its code
       const code = text.charCodeAt(i);
@@ -41,10 +37,8 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
       else if ((code >= start_code_u) && (code <= finish_code_u))
         char = String.fromCharCode(((code - start_code_u + amount) % alpha_num) + start_code_u);
     }
-    // Append
     output += char;
   }
-  // All done!
   return output;
 };
 
@@ -58,6 +52,7 @@ const caesarDecrypt = (text, shift, type) => {
   return result;
 };
 
+// Worker for single char in Vigenere algorithm
 const workerChar = (char, key, type = 'e', lang) => {
   if (!isLetter(char) || !isLetter(key)) return char;
   const uppercase = isUpperCase(char);
@@ -74,6 +69,7 @@ const workerChar = (char, key, type = 'e', lang) => {
   } else return String.fromCharCode((uppercase ? A : a) + (((char - a) + (key - a)) % alpha_num));
 };
 
+// Worker for Vigenere algorithm
 const worker = (str, key, type, lang) => {
   if (typeof(key) !== 'string' || typeof(str) !== 'string')
     throw Error('Text and Key must be string');
