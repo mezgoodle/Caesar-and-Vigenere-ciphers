@@ -5,11 +5,14 @@
     "main": "index.js",
     "dependencies": {},
     "devDependencies": {
+        "eslint": "^7.1.0",
         "jest": "^26.0.0"
     },
     "scripts": {
         "start": "node .",
-        "test": "node tests/tests.js && jest"
+        "test": "node tests/tests.js && jest",
+        "lint": "eslint ./",
+        "lint:fix": "eslint ./ --fix"
     },
     "repository": {
         "type": "git",
