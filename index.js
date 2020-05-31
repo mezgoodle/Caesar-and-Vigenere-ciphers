@@ -12,10 +12,8 @@ const isLetter = c => (c.match(/[a-zA-Zа-яА-Я]+/));
 const isUpperCase = c => (c.match(/[A-ZА-Я]+/));
 
 const caesarEncrypt = (text = null, amount = null, type = null) => {
-  if (typeof(amount) !== 'number') throw Error('Amount must be number');
+  if (typeof(amount) !== 'number') throw Error('Amount should be integer and not empty');
   if (text === null) throw Error('Message should be not empty');
-  if (!Number.isInteger(amount) || amount === null)
-    throw Error('Amount should be integer and not empty');
   if (typeof(text) !== 'string') throw Error('Text must be String');
   // Type define
   if (!Object.prototype.hasOwnProperty.call(typeDefine, type))
