@@ -1,6 +1,11 @@
 'use strict';
 
-const { caesarEncrypt, caesarDecrypt, vigenereEncrypt, vigenereDecrypt } = require('../index');
+const {
+  caesarEncrypt,
+  caesarDecrypt,
+  vigenereEncrypt,
+  vigenereDecrypt
+} = require('../index');
 const data = require('./data.json');
 
 const testingWorker = (data, name, fn) => {
