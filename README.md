@@ -23,7 +23,7 @@ I've always been interested in the topic of data encryption, but I didn't delve 
 
 ## Build status
 
-Here you can build status of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration)/[continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment):
+Here you can see build status of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration)/[continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment):
 
 ![Node.js Package](https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers/workflows/Node.js%20Package/badge.svg)
 [![Build Status](https://travis-ci.com/mezgoodle/Caesar-and-Vigenere-ciphers.svg?branch=master)](https://travis-ci.com/mezgoodle/Caesar-and-Vigenere-ciphers)
@@ -127,21 +127,25 @@ Here you can see small example of Vigenere worker
 
 ```js
 const worker = (str, key, type, lang) => {
-    if (str === null || key === null) throw Error("Message and key should be not empty");
-    key = keepLetters(key);
-    let result = "",
-        keyIndex = 0;
-    for (let i = 0; i < str.length; i++) {
-        let char = str.charAt(i);
-        if (isLetter(char)) {
-            let k = key.charAt(keyIndex++ % key.length);
-            let temp = workerChar(char, k, type);
-            result += temp;
-        } else {
-            result += char;
-        }
+  if (typeof(key) !== 'string' || typeof(str) !== 'string')
+    throw Error('Text and Key must be string');
+  if (!Object.prototype.hasOwnProperty.call(typeDefine, lang))
+    throw Error('Type must be "lat" or "cyr"');
+  if (str === null || key === null) throw Error('Message and key should be not empty');
+  key = keepLetters(key);
+  let result = '',
+    keyIndex = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charAt(i);
+    if (isLetter(char)) {
+      const key_el = key.charAt(keyIndex++ % key.length);
+      const temp = workerChar(char, key_el, type, lang);
+      result += temp;
+    } else {
+      result += char;
     }
-    return result;
+  }
+  return result;
 };
 ```
 
