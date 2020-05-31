@@ -1,5 +1,6 @@
 *.yml
 .eslintrc
+.eslintignore
 *.json
 .gitignore
 tests
