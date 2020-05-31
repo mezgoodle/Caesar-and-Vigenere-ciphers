@@ -1,10 +1,10 @@
 'use strict';
 
 const typeDefine = {
-  'cyr': { alpha_num: 32, start_code_u: 1040,
-    finish_code_u: 1071, start_code_l: 1072, finish_code_l: 1105 },
-  'lat': { alpha_num: 26, start_code_u: 65,
-    finish_code_u: 90, start_code_l: 97, finish_code_l: 122 },
+  'cyr': { 'alpha_num': 32, 'start_code_u': 1040,
+    'finish_code_u': 1071, 'start_code_l': 1072, 'finish_code_l': 1105 },
+  'lat': { 'alpha_num': 26, 'start_code_u': 65,
+    'finish_code_u': 90, 'start_code_l': 97, 'finish_code_l': 122 },
 };
 
 const keepLetters = s => (s.replace(/[^a-zA-Zа-яА-Я]+/g, ''));
