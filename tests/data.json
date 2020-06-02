@@ -7,6 +7,9 @@
             { "value": "Разнообразный ", "key": 2, "type": "cyr" }, "Твйпрргтвйпэл ", "testSimpleCyrillic"
         ],
         [
+            { "value": "αβ", "key": 1, "type": "gre" }, "βγ", "testSimpleGreek"
+        ],
+        [
             { "value": "m1x", "key": 7, "type": "lat" }, "t1e", "testSimpleWithDigits"
         ],
         [
