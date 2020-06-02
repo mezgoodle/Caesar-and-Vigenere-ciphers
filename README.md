@@ -48,7 +48,7 @@ I'm using only [jest](https://jestjs.io/) for testing, but that's enough for uni
 
 ## Features
 
-With my package you can encrypt / decrypt text with Caesar and Wiegener  algorithms.
+With my package you can encrypt / decrypt text with Caesar and Wiegener  algorithms with *latin* or *cyrillic* alphabet based on **UTF-16**.
 
 ## Installation
 
