@@ -22,6 +22,9 @@
             { "value": "укрепление и развитие структуры", "key": 2, "type": "cyr" }, "хмтзснзпкз к твйдкфкз уфтхмфхтэ", "testSimpleWithSpacesCyrillic"
         ],
         [
+            { "value": "εγω ειμαι", "key": 2, "type": "gre" }, "ηεβ ηλξγλ", "testSimpleWithSpacesGreek"
+        ],
+        [
             { "value": "pellentesque", "key": 0, "type": "lat" }, "pellentesque", "testZeroAmount"
         ],
         [
