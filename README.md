@@ -48,7 +48,9 @@ I'm using only [jest](https://jestjs.io/) for testing, but that's enough for uni
 
 ## Features
 
-With my package you can encrypt / decrypt text with Caesar and Wiegener  algorithms with *latin* or *cyrillic* alphabet based on **UTF-16**.
+With my package you can encrypt / decrypt text with Caesar and Wiegener  algorithms with *latin*, *cyrillic* or *greek* alphabet based on **UTF-16**.
+
+> If you see incorrect work with alphabet, please write an issue.
 
 ## Installation
 
@@ -68,22 +70,38 @@ const { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText }
 ## Fast usage
 
 ```js
+// Latin
+
 console.log(caesarEncrypt("pellentesque", 12, "lat"));
 // expected output: bqxxqzfqecgq
-console.log(caesarEncrypt("привет", 2, "cyr"));
-// expected output: сткдзф
 console.log(caesarDecrypt("pellentesque", -12, "lat"));
 // expected output: bqxxqzfqecgq
-console.log(caesarDecrypt("сткдзф", 2, "cyr"));
-// expected output: привет
 console.log(vigenereEncrypt("unopinionated", "express", "lat"));
 // expected output: ykdgmfaskpkiv
-console.log(vigenereEncrypt("Карл у Клары украл кораллы", "кларнет", "cyr"));
-// expected output: Флры а Пэкыы гчхтх хоанрэе
 console.log(vigenereDecrypt("ykdgmfaskpkiv", "express", "lat"));
 // expected output: unopinionated
+
+// Cyrillic
+
+console.log(caesarEncrypt("привет", 2, "cyr"));
+// expected output: сткдзф
+console.log(caesarDecrypt("сткдзф", 2, "cyr"));
+// expected output: привет
+console.log(vigenereEncrypt("Карл у Клары украл кораллы", "кларнет", "cyr"));
+// expected output: Флры а Пэкыы гчхтх хоанрэе
 console.log(vigenereDecrypt("Флры а Пэкыы гчхтх хоанрэе", "кларнет", "cyr"));
 // expected output: Карл у Клары украл кораллы
+
+// Greek
+
+console.log(caesarEncrypt("αβ", 1, "gre"));
+// expected output: βγ
+console.log(caesarDecrypt("βγ", 1, "gre"));
+// expected output: αβ
+console.log(vigenereEncrypt("ΓειΑ", "βι", "gre"));
+// expected output: ΔνκΙ
+console.log(vigenereDecrypt("ΔνκΙ", "βι", "gre"));
+// expected output: ΓειΑ
 ```
 
 ## API
