@@ -34,7 +34,7 @@
             { "value": "adadA", "key": -12000, "type": "lat" }, "mpmpM", "testUpperLowerCase"
         ],
         [
-            { "value": "ПОзВоляКт", "key": 17, "type": "cyr" }, "АЯшУяьрЫг", "testUpperLowerCaseCyrillic"
+            { "value": "ΓειΑ", "key": 3, "type": "gre" }, "ΖθμΔ", "testUpperLowerCaseGreek"
         ],
         [
             { "value": "ad_dA", "key": 1, "type": "lat" }, "be_eB", "testStringWithSymbols"
@@ -55,6 +55,9 @@
             { "value": "!@$^@а", "key": -1970, "type": "cyr" }, "!@$^@о", "testSymbolsWithStringCyrillic"
         ],
         [
+            { "value": "!@$^@Ξ", "key": -1970, "type": "gre" }, "!@$^@Σ", "testSymbolsWithStringGreek"
+        ],
+        [
             { "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "key": 10, "type": "lat" }, "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "testLongString"
         ],
         [
@@ -67,6 +70,9 @@
         ],
         [
             { "value": "Твйпрргтвйпэл ", "key": 2, "type": "cyr" }, "Разнообразный ", "testSimpleCyrillic"
+        ],
+        [
+            { "value": "βγ ", "key": 1, "type": "gre" }, "αβ ", "testSimpleGreek"
         ],
         [
             { "value": "b1m", "key": 15, "type": "lat" }, "m1x", "testSimpleWithDigits"
@@ -96,6 +102,9 @@
             { "value": "АЯшУяьрЫг", "key": 17, "type": "cyr" }, "ПОзВоляКт", "testUpperLowerCaseCyrillic"
         ],
         [
+            { "value": "ΖθμΔ", "key": 3, "type": "gre" }, "ΓειΑ", "testUpperLowerCaseGreek"
+        ],
+        [
             { "value": "YtHy#weQ^LVt", "key": 7, "type": "lat" }, "RmAr#pxJ^EOm", "testStringWithSymbols"
         ],
         [
@@ -114,6 +123,9 @@
             { "value": "!@$^@о", "key": -1970, "type": "cyr" }, "!@$^@а", "testSymbolsWithStringCyrillic"
         ],
         [
+            { "value": "!@$^@Σ", "key": -1970, "type": "gre" }, "!@$^@Ξ", "testSymbolsWithStringGreek"
+        ],
+        [
             { "value": "Vybow Szcew sc cswzvi newwi dohd yp dro zbsxdsxq kxn dizocoddsxq sxnecdbi", "key": 10, "type": "lat" }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry", "testLongString"
         ],
         [
@@ -126,6 +138,9 @@
         ],
         [
             { "value": "Карл у Клары украл кораллы", "key": "кларнет", "type": "cyr" }, "Флры а Пэкыы гчхтх хоанрэе", "testSimpleCyrillic"
+        ],
+        [
+            { "value": "αβ", "key": "αβ", "type": "gre" }, "αγ", "testSimpleGreek"
         ],
         [
             { "value": "m a x", "key": "ab", "type": "lat" }, "m b x", "testSimpleWithSpaces"
@@ -146,6 +161,9 @@
             { "value": "jdjFTdjK", "key": "qwasz", "type": "lat" }, "zzjXStfK", "testUpperLowerCase"
         ],
         [
+            { "value": "ΓειΑ", "key": "βι", "type": "gre" }, "ΔνκΙ", "testUpperLowerCaseGreek"
+        ],
+        [
             { "value": "aba", "key": "a1b", "type": "lat" }, "aca", "testIntegersInKey"
         ],
         [
@@ -156,6 +174,9 @@
         ],
         [
             { "value": "фвфв!@#два", "key": "б", "type": "cyr" }, "хгхг!@#егб", "testSymbolsWithStringCyrillic"
+        ],
+        [
+            { "value": "!@$^@Σ", "key": "ο", "type": "gre" }, "!@$^@Θ", "testSymbolsWithStringGreek"
         ],
         [
             { "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus in ornare quam viverra orci.", "key": "nisl nunc mi", "type": "lat" }, "Ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. Wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. Scgkvjmd vh btziem ifng ikhmezs zewv.", "testLongString"
@@ -170,6 +191,9 @@
         ],
         [
             { "value": "Флры а Пэкыы гчхтх хоанрэе", "key": "кларнет", "type": "cyr" }, "Карл у Клары украл кораллы", "testSimpleCyrillic"
+        ],
+        [
+            { "value": "αγ", "key": "αβ", "type": "gre" }, "αβ", "testSimpleGreek"
         ],
         [
             { "value": "m b x", "key": "abc", "type": "lat" }, "m a v", "testSimpleWithSpaces"
@@ -190,6 +214,9 @@
             { "value": "zzjXStfK", "key": "qwasz", "type": "lat" }, "jdjFTdjK", "testUpperLowerCase"
         ],
         [
+            { "value": "ΔνκΙ", "key": "βι", "type": "gre" }, "ΓειΑ", "testUpperLowerCaseGreek"
+        ],
+        [
             { "value": "aca", "key": "a1b", "type": "lat" }, "aba", "testIntegersInKey"
         ],
         [
@@ -200,6 +227,9 @@
         ],
         [
             { "value": "хгхг!@#егб", "key": "б", "type": "cyr" }, "фвфв!@#два", "testSymbolsWithStringCyrillic"
+        ],
+        [
+            { "value": "!@$^@Θ", "key": "ο", "type": "gre" }, "!@$^@Σ", "testSymbolsWithStringGreek"
         ],
         [
             { "value": "ywjpz ccugu qwdze mvv murb, uzamrefmgcj lqcckekvvy pycg, uql qw wthmzqp bruhze caeulvlmyg og nmjbzw pg xbnazr usrau nnuyhi. wfvmzqp mymepanho zqfq ifvm rnqqsmfo dono mlvxadpcai hqgiw aeivp eitqlevm. scgkvjmd vh btziem ifng ikhmezs zewv.", "key": "nisl nunc mi", "type": "lat" }, "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. faucibus in ornare quam viverra orci.", "testLongString"
