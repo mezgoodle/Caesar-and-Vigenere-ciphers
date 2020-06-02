@@ -5,11 +5,13 @@ const typeDefine = {
     'finish_code_u': 1071, 'start_code_l': 1072, 'finish_code_l': 1105 },
   'lat': { 'alpha_num': 26, 'start_code_u': 65,
     'finish_code_u': 90, 'start_code_l': 97, 'finish_code_l': 122 },
+  'gre': { 'alpha_num': 25, 'start_code_u': 913,
+    'finish_code_u': 937, 'start_code_l': 945, 'finish_code_l': 969 },
 };
 
-const keepLetters = s => (s.replace(/[^a-zA-Zа-яА-Я]+/g, ''));
-const isLetter = c => (c.match(/[a-zA-Zа-яА-Я]+/));
-const isUpperCase = c => (c.match(/[A-ZА-Я]+/));
+const keepLetters = s => (s.replace(/[^a-zA-Zа-яА-Яα-ωΑ-Ω]+/g, ''));
+const isLetter = c => (c.match(/[a-zA-Zа-яА-Яα-ωΑ-Ω]+/));
+const isUpperCase = c => (c.match(/[A-ZА-ЯΑ-Ω]+/));
 
 const caesarEncrypt = (text = null, amount = null, type = null) => {
   if (typeof(amount) !== 'number') throw Error('Amount should be integer and not empty');

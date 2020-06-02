@@ -6,6 +6,7 @@ const {
   vigenereEncrypt,
   vigenereDecrypt
 } = require('../index');
+
 const data = require('./data.json');
 const assert = require('assert').strict;
 
