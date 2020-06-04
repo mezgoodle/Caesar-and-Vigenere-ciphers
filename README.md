@@ -64,7 +64,7 @@ npm i @mezgoodle/caesar-and-vigenere-ciphers --save
 
 ```js
 // Using Node.js `require()`
-const { caesarEncrypt, caesarDecrypt, vigenereEncryptText, vigenereDecryptText } = require("@mezgoodle/caesar-and-vigenere-ciphers");
+const { caesarEncrypt, caesarDecrypt, vigenereEncrypt, vigenereDecrypt } = require("@mezgoodle/caesar-and-vigenere-ciphers");
 ```
 
 ## Fast usage
