@@ -176,7 +176,7 @@ Unit-testing with **assert** and **jest**:
 Number of my tests is more than 50, so I can't just do screenshot :smile:. I give you the [link](https://travis-ci.com/github/mezgoodle/Caesar-and-Vigenere-ciphers) to [Travis CI](https://travis-ci.org/), where you can see all my tests.
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Also look at the [CONTRIBUTING.md](https://github.com/mezgoodle/Caesar-and-Vigenere-ciphers/blob/master/CONTRIBUTING.md).
 
 ## License
 
