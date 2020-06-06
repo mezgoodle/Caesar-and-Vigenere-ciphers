@@ -14,13 +14,20 @@ const isLetter = c => (c.match(/[a-zA-Zа-яА-Яα-ωΑ-Ω]+/));
 const isUpperCase = c => (c.match(/[A-ZА-ЯΑ-Ω]+/));
 
 const caesarEncrypt = (text = null, amount = null, type = null) => {
-  if (typeof(amount) !== 'number') throw Error('Amount should be integer and not empty');
+  if (typeof(amount) !== 'number')
+    throw Error('Amount should be integer and not empty');
   if (text === null) throw Error('Message should be not empty');
   if (typeof(text) !== 'string') throw Error('Text must be String');
   // Type define
   if (!Object.prototype.hasOwnProperty.call(typeDefine, type))
     throw Error('Type must be "lat" or "cyr"');
-  const { AlphaNum, StartCodeU, FinishCodeU, StartCodeL, FinishCodeL } = typeDefine[type];
+  const {
+    AlphaNum,
+    StartCodeU,
+    FinishCodeU,
+    StartCodeL,
+    FinishCodeL
+  } = typeDefine[type];
   // Wrap the amount
   if (amount < 0) return caesarEncrypt(text, amount + AlphaNum, type);
 
@@ -32,10 +39,12 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
       const code = text.charCodeAt(i);
       // lowercase letters
       if ((code >= StartCodeL) && (code <= FinishCodeL))
-        char = String.fromCharCode(((code - StartCodeL + amount) % AlphaNum) + StartCodeL);
+        char = String.fromCharCode(
+          ((code - StartCodeL + amount) % AlphaNum) + StartCodeL);
       // Uppercase letters
       else if ((code >= StartCodeU) && (code <= FinishCodeU))
-        char = String.fromCharCode(((code - StartCodeU + amount) % AlphaNum) + StartCodeU);
+        char = String.fromCharCode(
+          ((code - StartCodeU + amount) % AlphaNum) + StartCodeU);
     }
     output += char;
   }
@@ -66,7 +75,8 @@ const workerChar = (char, key, type = 'e', lang) => {
     if (temp < a) temp += AlphaNum;
     temp = String.fromCharCode(temp);
     return uppercase ? temp.toUpperCase() : temp;
-  } else return String.fromCharCode((uppercase ? A : a) + (((char - a) + (key - a)) % AlphaNum));
+  } else return String.fromCharCode(
+    (uppercase ? A : a) + (((char - a) + (key - a)) % AlphaNum));
 };
 
 // Worker for Vigenere algorithm
@@ -75,15 +85,16 @@ const worker = (str, key, type, lang) => {
     throw Error('Text and Key must be string');
   if (!Object.prototype.hasOwnProperty.call(typeDefine, lang))
     throw Error('Type must be "lat" or "cyr"');
-  if (str === null || key === null) throw Error('Message and key should be not empty');
+  if (str === null || key === null)
+    throw Error('Message and key should be not empty');
   key = keepLetters(key);
   let result = '',
     keyIndex = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charAt(i);
     if (isLetter(char)) {
-      const key_el = key.charAt(keyIndex++ % key.length);
-      const temp = workerChar(char, key_el, type, lang);
+      const keyEl = key.charAt(keyIndex++ % key.length);
+      const temp = workerChar(char, keyEl, type, lang);
       result += temp;
     } else {
       result += char;
@@ -98,4 +109,9 @@ const vigenereEncrypt = (text = null, key = null, lang = null) =>
 const vigenereDecrypt = (cipher = null, key = null, lang = null) =>
   (worker(cipher, key, 'd', lang));
 
-module.exports = { caesarEncrypt, caesarDecrypt, vigenereEncrypt, vigenereDecrypt };
+module.exports = {
+  caesarEncrypt,
+  caesarDecrypt,
+  vigenereEncrypt,
+  vigenereDecrypt
+};
