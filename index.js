@@ -14,10 +14,10 @@ const isLetter = c => (c.match(/[a-zA-Zа-яА-Яα-ωΑ-Ω]+/));
 const isUpperCase = c => (c.match(/[A-ZА-ЯΑ-Ω]+/));
 
 const caesarEncrypt = (text = null, amount = null, type = null) => {
-  if (typeof(amount) !== 'number')
+  if (typeof amount !== 'number')
     throw Error('Amount should be integer and not empty');
   if (text === null) throw Error('Message should be not empty');
-  if (typeof(text) !== 'string') throw Error('Text must be String');
+  if (typeof text !== 'string') throw Error('Text must be String');
   // Type define
   if (!Object.prototype.hasOwnProperty.call(typeDefine, type))
     throw Error('Type must be "lat" or "cyr"');
@@ -81,7 +81,7 @@ const workerChar = (char, key, type = 'e', lang) => {
 
 // Worker for Vigenere algorithm
 const worker = (str, key, type, lang) => {
-  if (typeof(key) !== 'string' || typeof(str) !== 'string')
+  if (typeof key !== 'string' || typeof str !== 'string')
     throw Error('Text and Key must be string');
   if (!Object.prototype.hasOwnProperty.call(typeDefine, lang))
     throw Error('Type must be "lat" or "cyr"');
