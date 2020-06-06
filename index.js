@@ -14,13 +14,15 @@ const isLetter = c => (c.match(/[a-zA-Zа-яА-Яα-ωΑ-Ω]+/));
 const isUpperCase = c => (c.match(/[A-ZА-ЯΑ-Ω]+/));
 
 const caesarEncrypt = (text = null, amount = null, type = null) => {
-  if (typeof amount !== 'number')
+  if (typeof amount !== 'number') {
     throw Error('Amount should be integer and not empty');
+  }
   if (text === null) throw Error('Message should be not empty');
   if (typeof text !== 'string') throw Error('Text must be String');
   // Type define
-  if (!Object.prototype.hasOwnProperty.call(typeDefine, type))
+  if (!Object.prototype.hasOwnProperty.call(typeDefine, type)) {
     throw Error('Type must be "lat" or "cyr"');
+  }
   const {
     AlphaNum,
     StartCodeU,
@@ -42,9 +44,10 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
         char = String.fromCharCode(
           ((code - StartCodeL + amount) % AlphaNum) + StartCodeL);
       // Uppercase letters
-      else if ((code >= StartCodeU) && (code <= FinishCodeU))
+      else if ((code >= StartCodeU) && (code <= FinishCodeU)) {
         char = String.fromCharCode(
           ((code - StartCodeU + amount) % AlphaNum) + StartCodeU);
+      }
     }
     output += char;
   }
@@ -52,8 +55,9 @@ const caesarEncrypt = (text = null, amount = null, type = null) => {
 };
 
 const caesarDecrypt = (text, shift, type) => {
-  if (!Object.prototype.hasOwnProperty.call(typeDefine, type))
+  if (!Object.prototype.hasOwnProperty.call(typeDefine, type)) {
     throw Error('Type must be "lat" or "cyr"');
+  }
   const { AlphaNum } = typeDefine[type];
   let result = '';
   shift = (AlphaNum - shift) % AlphaNum;
@@ -81,15 +85,18 @@ const workerChar = (char, key, type = 'e', lang) => {
 
 // Worker for Vigenere algorithm
 const worker = (str, key, type, lang) => {
-  if (typeof key !== 'string' || typeof str !== 'string')
+  if (typeof key !== 'string' || typeof str !== 'string') {
     throw Error('Text and Key must be string');
-  if (!Object.prototype.hasOwnProperty.call(typeDefine, lang))
+  }
+  if (!Object.prototype.hasOwnProperty.call(typeDefine, lang)) {
     throw Error('Type must be "lat" or "cyr"');
-  if (str === null || key === null)
+  }
+  if (str === null || key === null) {
     throw Error('Message and key should be not empty');
+  }
   key = keepLetters(key);
-  let result = '',
-    keyIndex = 0;
+  let result = '';
+  let keyIndex = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charAt(i);
     if (isLetter(char)) {
